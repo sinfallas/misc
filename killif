@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ $# -ne 2 ];
+then echo "Invalid number of arguments"
+exit 0
+fi
+
+while [ 1=1 ];
+do
+
+SIZE=`pmap $1|grep total|cut -d" " -f13`
+SIZE=${SIZE%%K*}
+SIZEMB=$(($SIZE/1024))
+echo "Process id ="$1" Size = "$SIZEMB" MB"
+if [ $SIZEMB > $2 ];
+then echo "SIZE has exceeded.\nKilling the process......"
+`kill -9 $1`
+echo "Killed the process"
+exit 0
+else
+echo "SIZE has not yet exceeding"
+fi
+
+sleep 10
+done
+
+##./killif.sh 132451 100
+exit 0
