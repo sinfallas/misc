@@ -1,13 +1,11 @@
 #!/bin/sh
-
+##./killif.sh 132451 100
 if [ $# -ne 2 ];
 then echo "Invalid number of arguments"
 exit 0
 fi
-
 while [ 1=1 ];
 do
-
 SIZE=`pmap $1|grep total|cut -d" " -f13`
 SIZE=${SIZE%%K*}
 SIZEMB=$(($SIZE/1024))
@@ -20,9 +18,6 @@ exit 0
 else
 echo "SIZE has not yet exceeding"
 fi
-
 sleep 10
 done
-
-##./killif.sh 132451 100
 exit 0
