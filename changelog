@@ -1,4 +1,22 @@
-commit 6d30ea55ab8d6673981ad074dea5a04f8b1ec9f6 (HEAD, origin/master, origin/HEAD, master)
+commit 3942c1e1f8348344d4ea3c6b2bc823d026bc42cf (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Sep 25 17:33:27 2014 -0430
+
+    * agrego el script para calcular shmall y shmax
+
+commit 4675cb4b7e0d42cf0f9313dc643f36025da4f75c
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Wed Sep 10 22:29:47 2014 -0430
+
+    * misc
+
+commit 743905206d16135116d3230cee86f62915250bd5
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Wed Sep 10 22:27:49 2014 -0430
+
+    * changelog
+
+commit 6d30ea55ab8d6673981ad074dea5a04f8b1ec9f6
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Wed Sep 10 22:27:27 2014 -0430
 
