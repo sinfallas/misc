@@ -1,4 +1,16 @@
-commit 5df5e2dff33a1410130be104dbdcf83cf0d477ed (HEAD, origin/master, origin/HEAD, master)
+commit 89bc38833bab62d83ec2524cb9336ba01858c1c2 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Oct 12 20:55:24 2014 -0430
+
+    * se agrega script para instalar liquorix en debian y derivados
+
+commit 8359d21d30c6df2d791a0255312b73ca805c93d1
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Oct 10 20:27:28 2014 -0430
+
+    * changelog
+
+commit 5df5e2dff33a1410130be104dbdcf83cf0d477ed
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Oct 10 20:27:03 2014 -0430
 
