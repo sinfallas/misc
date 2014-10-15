@@ -1,0 +1,3 @@
+#!/bin/bash
+env x='() { :;}; echo vulnerable' bash -c "echo Esto es un test"
+exit 0
