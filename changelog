@@ -1,4 +1,16 @@
-commit 89bc38833bab62d83ec2524cb9336ba01858c1c2 (HEAD, origin/master, origin/HEAD, master)
+commit 2f7dcd7c662980614b30b3569c2011561a14e2f5 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Wed Oct 15 19:14:54 2014 -0430
+
+    *se agrega un script para comprobar la vulnerabilidad a shellshock
+
+commit 5fcce594ab47179c34cb9f486e3d47d0d8fcad52
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Oct 12 20:56:17 2014 -0430
+
+    * changelog
+
+commit 89bc38833bab62d83ec2524cb9336ba01858c1c2
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Sun Oct 12 20:55:24 2014 -0430
 
