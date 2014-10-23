@@ -1,4 +1,16 @@
-commit a5f71d4d30b613de48814e7bf74583b3744b6900 (HEAD, origin/master, origin/HEAD, master)
+commit cc049f0306c8e80c43ecf87b138164eee5158774 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Oct 23 10:39:06 2014 -0430
+
+    * se cambian los nombre de subir y subir2 para hacerlos mas utiles
+
+commit 6be58da3da0e5222cb956465af65ec1f6b5395f0
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Oct 16 14:35:12 2014 -0430
+
+    * changelog
+
+commit a5f71d4d30b613de48814e7bf74583b3744b6900
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Oct 16 14:32:39 2014 -0430
 
