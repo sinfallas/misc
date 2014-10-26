@@ -1,4 +1,16 @@
-commit fe75ef352c8715f5d089854e9efa38da93eacefe (HEAD, origin/master, origin/HEAD, master)
+commit b0714caab3d20a0b8acec56eafcf46c11d409003 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sat Oct 25 21:31:06 2014 -0430
+
+    * se agrega al script clean-squid la comprobacion de privilegios de root
+
+commit 57619fb385f4f6dd4559a4dbabad8e1c22c7d38d
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sat Oct 25 21:30:14 2014 -0430
+
+    * changelog
+
+commit fe75ef352c8715f5d089854e9efa38da93eacefe
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Sat Oct 25 21:29:16 2014 -0430
 
