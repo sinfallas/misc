@@ -1,4 +1,16 @@
-commit cc049f0306c8e80c43ecf87b138164eee5158774 (HEAD, origin/master, origin/HEAD, master)
+commit fe75ef352c8715f5d089854e9efa38da93eacefe (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sat Oct 25 21:29:16 2014 -0430
+
+    * se agrega script para limpiar cache de squid3
+
+commit e672567032cd1c5816e3861c37dc649ae37853d6
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Thu Oct 23 10:39:47 2014 -0430
+
+    * changelog
+
+commit cc049f0306c8e80c43ecf87b138164eee5158774
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Oct 23 10:39:06 2014 -0430
 
