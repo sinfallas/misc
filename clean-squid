@@ -1,0 +1,8 @@
+#!/bin/bash
+#elaborado por sinfallas
+service squid3 stop
+rm -rfv /var/spool/squid3/*
+squid3 -z
+service squid3 restart
+echo "finalizado"
+exit 0
