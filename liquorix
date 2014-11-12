@@ -2,7 +2,7 @@
 #elaborado por sinfallas
 if [ $USER != root ]; then
 echo "Error: debes ser root"
-exit 0
+exit 1
 fi
 echo "deb http://liquorix.net/debian sid main" >> /etc/apt/sources.list
 add-apt-repository -y ppa:ubuntu-toolchain-r/test
