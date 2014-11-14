@@ -1,4 +1,16 @@
-commit 8576ceab6295b077d35506a9d4232110f6f57593 (HEAD, origin/master, origin/HEAD, master)
+commit dc2225466d811cb113be3407c31f814e0b089497 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:04:12 2014 -0430
+
+    * se elimina monagas
+
+commit 9d3c4c155b8396d827d3d6276df24b47bacb5342
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:01:50 2014 -0430
+
+    * changelog
+
+commit 8576ceab6295b077d35506a9d4232110f6f57593
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Nov 14 19:01:32 2014 -0430
 
