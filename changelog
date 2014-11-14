@@ -1,4 +1,16 @@
-commit d3323ea3aeb6fd995c17885c17de5134813e48e1 (HEAD, origin/master, origin/HEAD, master)
+commit 8576ceab6295b077d35506a9d4232110f6f57593 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:01:32 2014 -0430
+
+    * se traslada calc-mem a su propio repo
+
+commit c3e12e0a9ac9565e6f0863b1afa27718b3535481
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Nov 11 22:01:24 2014 -0430
+
+    * changelog
+
+commit d3323ea3aeb6fd995c17885c17de5134813e48e1
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Tue Nov 11 22:01:13 2014 -0430
 
