@@ -1,4 +1,19 @@
-commit dc2225466d811cb113be3407c31f814e0b089497 (HEAD, origin/master, origin/HEAD, master)
+commit 93987a46380ffbb48074e48854b09ad73df53b57 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:40:32 2014 -0430
+
+    * se cambian los nombres
+    * se agrega travis
+    * se trasladan los script de git a su repo
+    * se traslada script de squid a su repo
+
+commit 452b884e28d92ca4b8f9bd70aabe168587741a98
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Fri Nov 14 19:04:26 2014 -0430
+
+    * changelog
+
+commit dc2225466d811cb113be3407c31f814e0b089497
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Fri Nov 14 19:04:12 2014 -0430
 
