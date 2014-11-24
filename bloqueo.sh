@@ -1,5 +1,4 @@
 #!/bin/bash
-#elaborado por sinfallas
 #bloquea un proceso para que no se ejecute simultaneamente
 randa=$(($RANDOM%3+1))
 pid_run=$(ps -eo pid,comm | grep $0 | egrep -o '[0-9]+' )
