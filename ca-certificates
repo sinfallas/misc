@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n | openssl s_client -connect download.01.org:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | tee '/usr/local/share/ca-certificates/download_01_org.crt'
+update-ca-certificates
+exit 0
