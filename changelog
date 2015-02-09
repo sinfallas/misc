@@ -1,4 +1,16 @@
-commit ad2793e0983db4ed8d7d05ec7219dda7652ebc0c (HEAD, origin/master, origin/HEAD, master)
+commit c97890c26393df1779353202ef86f9babb797898 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Feb 8 20:41:53 2015 -0430
+
+    * se agrega ca-certificates
+
+commit e2eb7b555395c2b8f3c733d3701285d3d1e33ea5
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Tue Jan 27 16:18:48 2015 -0430
+
+    * changelog
+
+commit ad2793e0983db4ed8d7d05ec7219dda7652ebc0c
 Author: Jose Perez <sinfallas@users.noreply.github.com>
 Date:   Tue Jan 27 11:03:05 2015 -0430
 
