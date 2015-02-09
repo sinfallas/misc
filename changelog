@@ -1,4 +1,17 @@
-commit c97890c26393df1779353202ef86f9babb797898 (HEAD, origin/master, origin/HEAD, master)
+commit fd8f14f7c876fb50122e78c4666d549e129f1536 (HEAD, origin/master, origin/HEAD, master)
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Feb 8 21:07:58 2015 -0430
+
+    * se crean los siguientes script: ksm, thp y zram
+    * se traduce al ingles liquorix.sh
+
+commit f9dd2a3f16ac0e01be27981ad6fa51cda8b9fa47
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Feb 8 20:42:13 2015 -0430
+
+    * changelog
+
+commit c97890c26393df1779353202ef86f9babb797898
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Sun Feb 8 20:41:53 2015 -0430
 
