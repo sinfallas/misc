@@ -1,4 +1,16 @@
-commit 6431d22a385beddb090bccb8f508670c100c8a4a (HEAD, origin/master, origin/HEAD, master)
+commit 6d3ba7a24da591ce580dfeb307779ad8e1bf21a1 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Feb 21 10:34:52 2015 -0430
+
+    * se trasladan algunos script a su nuevo repo
+
+commit fa674ee36a0ba2c340cfb134c422362bd8fb1e38
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Feb 21 10:06:23 2015 -0430
+
+    * changelog
+
+commit 6431d22a385beddb090bccb8f508670c100c8a4a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Feb 21 10:05:55 2015 -0430
 
