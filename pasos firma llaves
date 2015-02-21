@@ -1,0 +1,5 @@
+gpg --keyserver pgp.mit.edu --search-keys 785783B6
+gpg --edit-key 785783B6
+sign
+gpg --list-sigs 785783B6
+gpg --keyserver pgp.mit.edu --send-keys 785783B6
