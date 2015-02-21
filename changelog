@@ -1,4 +1,16 @@
-commit fd8f14f7c876fb50122e78c4666d549e129f1536 (HEAD, origin/master, origin/HEAD, master)
+commit 6431d22a385beddb090bccb8f508670c100c8a4a (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Feb 21 10:05:55 2015 -0430
+
+    * se agregan documentos que luego se deben convertir en scripts
+
+commit d28ffb905d1f3b5effae30dafbef34a05c2a6251
+Author: sinfallas <sinfallas@gmail.com>
+Date:   Sun Feb 8 21:08:34 2015 -0430
+
+    * changelog
+
+commit fd8f14f7c876fb50122e78c4666d549e129f1536
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Sun Feb 8 21:07:58 2015 -0430
 
