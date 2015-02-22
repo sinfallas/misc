@@ -1,4 +1,16 @@
-commit 6d3ba7a24da591ce580dfeb307779ad8e1bf21a1 (HEAD, origin/master, origin/HEAD, master)
+commit bf37e9f4f04b029b0c554986c781c0ee135734c8 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Feb 22 11:35:22 2015 -0430
+
+    * se agrega el script actualizar
+
+commit 90b42f3d35afd000410e6c8c43e8e8ec92522bb1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Feb 21 10:35:12 2015 -0430
+
+    * changelog
+
+commit 6d3ba7a24da591ce580dfeb307779ad8e1bf21a1
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Feb 21 10:34:52 2015 -0430
 
