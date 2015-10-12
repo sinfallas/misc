@@ -1,4 +1,35 @@
-commit ba0d1595425e082ff53eb1ae56fbabf72298b691 (HEAD, origin/master, origin/HEAD, master)
+commit d34b8840c785a41754bc21ac80710f0b1524f108 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 12 12:57:39 2015 -0430
+
+    * se traslada ddclone a su propio repositorio
+
+commit 08295d551a3e3634ce8771952c8cb8224c3980f1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 12 12:43:29 2015 -0430
+
+    licencia
+
+commit 14b019b23e90f90e9ce33a4c8934a9ed96edd2c6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 12 12:26:00 2015 -0430
+
+    * se coloca licencia a varios script
+    * se coloca trap en ddclone
+
+commit 57cc332c4ca37b3cc77391393fe99f957015cb0a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 12 12:18:33 2015 -0430
+
+    * se agrega el script ddclone
+
+commit 8927dfa7d2169fc258f16cdbab98c874cc4ff3e3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Aug 1 21:31:15 2015 -0430
+
+    * changelog
+
+commit ba0d1595425e082ff53eb1ae56fbabf72298b691
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Aug 1 21:30:56 2015 -0430
 
