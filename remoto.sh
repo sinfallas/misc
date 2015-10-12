@@ -1,4 +1,6 @@
 #!/bin/bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
 HOST="aqui_pon_la_maquina_remota"
 USER="aqui_pon_el_usuario_remoto"
 PASS="aqui_pon_el_password_remoto"

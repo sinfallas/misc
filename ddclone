@@ -5,7 +5,8 @@ if [[ $USER != root ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
-# colocar trap
+trap "rm -f /run/$0.pid; exit" INT TERM EXIT
+echo $BASHPID > /run/$0.pid
 # colocar dialogo en yad para escoger origen y destino
 
 mkdir -p /media/memoria-usb
@@ -16,4 +17,7 @@ dd if=/dev/sda of=/media/memoria-usb/imagen.raw
 
 # colocar barra de progreso
 
+
+rm -f /run/$0.pid
+trap - INT TERM EXIT
 exit 0

@@ -1,7 +1,9 @@
 #!/bin/bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
 if [ $USER != root ]; then
-echo "Error: must be root"
-exit 1
+	echo "Error: must be root"
+	exit 1
 fi
 echo "deb http://liquorix.net/debian sid main" >> /etc/apt/sources.list
 add-apt-repository -y ppa:ubuntu-toolchain-r/test
