@@ -1,4 +1,22 @@
-commit d34b8840c785a41754bc21ac80710f0b1524f108 (HEAD, origin/master, origin/HEAD, master)
+commit 77f6ba1e7e90dfb0b5928fc8f70b6f56a0daf123 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Oct 18 21:09:11 2015 -0430
+
+    * se agrega e script rsync
+
+commit 120f58847b950d1aca345df007df094896dd4447
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Oct 13 21:56:58 2015 -0430
+
+    coveralls
+
+commit 360ca0c7ad61c68613aa10fe8f51442423a51bac
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 12 12:58:06 2015 -0430
+
+    * changelog
+
+commit d34b8840c785a41754bc21ac80710f0b1524f108
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Oct 12 12:57:39 2015 -0430
 
