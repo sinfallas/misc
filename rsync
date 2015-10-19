@@ -1,0 +1,22 @@
+#!/bin/bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+if [[ $USER != root ]]; then
+	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
+	exit 1
+fi
+trap "rm -f /run/$0.pid; exit" INT TERM EXIT
+echo $BASHPID > /run/$0.pid
+
+if [[ -f /backup/.base ]]; then
+	mkdir -p /backup/"$(date +%d%m%y)"
+	rsync -czavvb --link-dest=/backup/"$(date +%d%m%y)" /origen/datos/ /backup/principal/
+else
+	mkdir -p /backup/principal
+	rsync -czav /origen/datos/ /backup/principal/
+	touch /backup/.base
+fi
+
+rm -f /run/$0.pid
+trap - INT TERM EXIT
+exit 0
