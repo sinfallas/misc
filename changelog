@@ -1,4 +1,22 @@
-commit 77f6ba1e7e90dfb0b5928fc8f70b6f56a0daf123 (HEAD, origin/master, origin/HEAD, master)
+commit 823df328621482b42380ae9c02d782622a55cf8b (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Oct 19 19:34:24 2015 -0430
+
+    * se elimina rsync
+
+commit b67b802b74ea464a7972586d17450bd34f18c38c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Oct 18 23:56:22 2015 -0430
+
+    optimizaciones
+
+commit 95cc5041d283d80350b7e4680aff73b800fd4bb0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Oct 18 21:09:30 2015 -0430
+
+    * changelog
+
+commit 77f6ba1e7e90dfb0b5928fc8f70b6f56a0daf123
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Oct 18 21:09:11 2015 -0430
 
