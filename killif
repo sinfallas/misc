@@ -1,5 +1,6 @@
 #!/bin/sh
 ##./killif.sh 132451 100
+LC_ALL=C
 if [ $# -ne 2 ];
 then echo "Invalid number of arguments"
 exit 1
