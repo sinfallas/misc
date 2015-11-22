@@ -1,4 +1,16 @@
-commit a09b050526b10e0677e3f09878b5a85f52153cd5 (HEAD, origin/master, origin/HEAD, master)
+commit 76b4bb77042e2eeb0e4edc3e30837213a45b853d (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 22 14:12:47 2015 -0430
+
+    * se cambia el locale
+
+commit 87fadb3055f7ac0d0fdb08411ae765d398f908f4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 22 14:05:40 2015 -0430
+
+    * changelog
+
+commit a09b050526b10e0677e3f09878b5a85f52153cd5
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Nov 22 14:05:10 2015 -0430
 
