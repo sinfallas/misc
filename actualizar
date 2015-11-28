@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
@@ -10,8 +9,8 @@ fi
 apt update
 apt -y --force-yes dist-upgrade
 apt-get clean
-apt-get autoremove
+apt-get -y autoremove
 rm -rf /tmp/*
 rm -rf /var/tmp/*
-echo -e "\e[00;1;92mFinished...\e[00m"
+echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
