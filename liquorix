@@ -2,7 +2,7 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-if [ $USER != root ]; then
+if [[ "$EUID" != "0" ]]; then
 	echo "Error: must be root"
 	exit 1
 fi
