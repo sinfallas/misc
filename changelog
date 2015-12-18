@@ -1,4 +1,16 @@
-commit 74c7c2cf36fb69b1384f223e44a3105bd5ac6235 (HEAD, origin/master, origin/HEAD, master)
+commit b578e40592cd10fa2af57a51ac0aaa02ce195153 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Dec 17 20:23:25 2015 -0430
+
+    trap
+
+commit 4d160daa70b72e2320cd92eb57ea3b20eca6a938
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Dec 12 00:15:28 2015 -0430
+
+    * changelog
+
+commit 74c7c2cf36fb69b1384f223e44a3105bd5ac6235
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Dec 12 00:12:08 2015 -0430
 
