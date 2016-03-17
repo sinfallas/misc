@@ -1,4 +1,22 @@
-commit 711efd94906e5c66ac6563a2101980b07e009f43 (HEAD, origin/master, origin/HEAD, master)
+commit 6b5c9644673a62c23cb81dbb740e4f43c4d747ca (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 17 17:13:28 2016 -0430
+
+    * se agrega deborphan a actualizar
+
+commit 557235c3eebfd8b8dbcc17c6194716eb24c4a769
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Mon Mar 7 10:41:29 2016 -0430
+
+    Update README.md
+
+commit b7d0013cfe243dc572741186ee9c79497c9d5a55
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 3 11:15:28 2016 -0430
+
+    * changelog
+
+commit 711efd94906e5c66ac6563a2101980b07e009f43
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Mar 3 11:15:15 2016 -0430
 
