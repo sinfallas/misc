@@ -9,8 +9,9 @@ if [[ "$EUID" != "0" ]]; then
 fi
 apt update
 apt -y --force-yes dist-upgrade
-apt-get clean
 apt-get -y autoremove
+apt-get -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
+apt-get clean
 rm -rf /tmp/*
 rm -rf /var/tmp/*
 echo -e "\e[00;1;92mFinalizado...\e[00m"
