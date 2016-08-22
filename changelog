@@ -1,4 +1,16 @@
-commit 6b5c9644673a62c23cb81dbb740e4f43c4d747ca (HEAD, origin/master, origin/HEAD, master)
+commit 64c059d4a6cbfe1b32a6fb2d1f9c35dc072b1150 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Aug 22 15:54:17 2016 -0400
+
+    * se corrige un error en actualizar
+
+commit b26aa4978f785151a2bee9ef1654eb8f56d50f01 (tag: v0.1.4)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 17 17:13:47 2016 -0430
+
+    * changelog
+
+commit 6b5c9644673a62c23cb81dbb740e4f43c4d747ca
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Mar 17 17:13:28 2016 -0430
 
