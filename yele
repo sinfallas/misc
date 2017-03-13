@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+LC_ALL=C
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
+	exit 1
+fi
+quien=$(who | cut -d' ' -f1 | sort | uniq)
+apt update
+apt full-upgrade
+apt -y install vlc calibre scribus inkscape filezilla firefox pcsx gfceu ubuntu-restricted-extras linux-firmware linux-firmware-nonfree prelink synaptic xterm pv localepurge audacity rhythmbox gimp intel-microcode pdfedit libdvdread4 myunity unsettings compizconfig-settings-manager fish fslint
+echo 'INTEL_BATCH="1"' >> /etc/environment
+echo "tmpfs /tmp tmpfs noexec,async,nosuid,noatime,nodev 0 0" >> /etc/fstab
+echo "tmpfs /var/cache/samba tmpfs noatime,async,nodev 0 0" >> /etc/fstab
+echo "tmpfs /var/log tmpfs noatime,async,nodev 0 0" >> /etc/fstab
+echo "tmpfs /var/spool tmpfs noatime,async,nodev 0 0" >> /etc/fstab
+echo "tmpfs /var/tmp tmpfs noexec,async,nosuid,noatime,nodev 0 0" >> /etc/fstab
+echo "tmpfs /home/$quien/.cache tmpfs noatime,noexec,nosuid,async,nodev,rw 0 0" >> /etc/fstab
+echo "* hard nproc 1000" >> /etc/security/limits.conf
+echo "net.ipv6.conf.all.disable_ipv6 = 1" > /etc/sysctl.d/60-disableipv6.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.d/60-disableipv6.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.d/60-disableipv6.conf
+sed -i 's/127.0.0.1	localhost/127.0.0.1	localhost $(hostname)/g' /etc/hosts
+sed --in-place 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+sed -i 's/PRELINKING=unknown/PRELINKING=yes/g' /etc/default/prelink
+sed -i 's/PRELINK_OPTS=-mR/PRELINK_OPTS=-amR/g' /etc/default/prelink
+sed -i 's_/bin/bash_/usr/bin/fish_g' /etc/passwd
+prelink -amvR
+/usr/share/doc/libdvdread4/install-css.sh
+clear
+echo -e "\e[00;1;92mFinalizado...\e[00m"
+exit 0
