@@ -1,4 +1,23 @@
-commit 64c059d4a6cbfe1b32a6fb2d1f9c35dc072b1150 (HEAD, origin/master, origin/HEAD, master)
+commit a7e9ac747cd7649102a547c705d51a4f8dd5e5fb (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 26 13:02:53 2017 -0400
+
+    * se agrega comprobacion con dpkg a actualizar
+
+commit 243fd2a5e8eff8642f87880e16e46b135880ed57
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Mar 13 18:07:53 2017 -0400
+
+    * se agrega el archivo yele
+    * se coloca autoclean en apt-get de actualizar
+
+commit 8e40c42c30dc30c59d4a17f2f8637b09b2bc9567
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Aug 22 15:54:47 2016 -0400
+
+    * changelog
+
+commit 64c059d4a6cbfe1b32a6fb2d1f9c35dc072b1150
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Aug 22 15:54:17 2016 -0400
 
