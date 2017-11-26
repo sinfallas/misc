@@ -7,12 +7,17 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
 	exit 1
 fi
+
+if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
+	apt-get -q update
+	apt-get -qy install deborphan
+fi
+
 apt update
 apt-get -y --force-yes dist-upgrade
 apt-get -y autoremove
 apt-get -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 apt-get clean
-apt-get autoclean
 rm -rf /tmp/*
 rm -rf /var/tmp/*
 echo -e "\e[00;1;92mFinalizado...\e[00m"
