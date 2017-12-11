@@ -1,4 +1,16 @@
-commit a7e9ac747cd7649102a547c705d51a4f8dd5e5fb (HEAD, origin/master, origin/HEAD, master)
+commit 5f2ee22e2a1ce33f0edf651f2448a931291ef89a (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 10 22:20:17 2017 -0400
+
+    * se hace un paquete a partir del script que se borro
+
+commit 4515664a9531b8acc808679d625179912c0394d6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Nov 26 13:03:15 2017 -0400
+
+    * changelog
+
+commit a7e9ac747cd7649102a547c705d51a4f8dd5e5fb
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Nov 26 13:02:53 2017 -0400
 
