@@ -18,6 +18,7 @@ apt -y dist-upgrade
 apt -y autoremove
 apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 apt clean
+history -c
 rm -rf /tmp/*
 rm -rf /var/tmp/*
 echo -e "\e[00;1;92mFinalizado...\e[00m"
