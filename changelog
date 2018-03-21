@@ -1,4 +1,34 @@
-commit 5f2ee22e2a1ce33f0edf651f2448a931291ef89a (HEAD -> master, origin/master, origin/HEAD)
+commit 6cc19f6a6ceebcf0f824d61dc197d11d9bf6a791 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 21 19:21:06 2018 -0400
+
+    * cambios menores
+
+commit 753858985db4d01c1573ef8f19b273bdb730dbae
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Mar 9 13:46:45 2018 -0400
+
+    Update actualizar
+
+commit 4e81f19a428e399640a6406fbb290f59b9573046
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Mar 9 13:36:28 2018 -0400
+
+    Update actualizar
+
+commit a4c01ba1500eda76e967eb2a47e7ad7accf6734c
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Fri Mar 9 13:35:08 2018 -0400
+
+    Update actualizar
+
+commit 22f71e5675f6d5bdbdbe0bd04756e84a5281ddd0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Dec 10 22:20:47 2017 -0400
+
+    * changelog
+
+commit 5f2ee22e2a1ce33f0edf651f2448a931291ef89a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Dec 10 22:20:17 2017 -0400
 
