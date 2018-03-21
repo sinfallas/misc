@@ -13,8 +13,9 @@ if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborp
 	apt-get -qy install deborphan
 fi
 
+rm -f /var/lib/apt/lists/lock
 apt -q update
-apt -y dist-upgrade
+apt -y --allow-unauthenticated dist-upgrade
 apt -y autoremove
 apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 apt clean
