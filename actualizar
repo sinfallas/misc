@@ -13,6 +13,7 @@ if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborp
 	apt-get -qy install deborphan
 fi
 
+rm -f /var/lib/dpkg/lock
 rm -f /var/lib/apt/lists/lock
 apt -q update
 apt -y --allow-unauthenticated dist-upgrade
