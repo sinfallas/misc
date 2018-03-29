@@ -25,7 +25,5 @@ prelink -amR
 history -c
 rm -rf /tmp/*
 rm -rf /var/tmp/*
-wget -q -O /usr/bin/actualizar - https://raw.githubusercontent.com/sinfallas/misc/master/actualizar
-chmod +x /usr/bin/actualizar
 echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
