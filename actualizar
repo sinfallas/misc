@@ -9,8 +9,8 @@ if [[ "$EUID" != "0" ]]; then
 fi
 
 if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
-	apt-get -q update
-	apt-get -qy install deborphan
+	apt -q update
+	apt -qy install deborphan
 fi
 
 rm -f /var/lib/dpkg/lock
@@ -20,9 +20,12 @@ apt -y --allow-unauthenticated dist-upgrade
 apt -y autoremove
 apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 apt clean
+update-grub2
 prelink -amR
 history -c
 rm -rf /tmp/*
 rm -rf /var/tmp/*
+wget -q -O /usr/bin/actualizar - https://raw.githubusercontent.com/sinfallas/misc/master/actualizar
+chmod +x /usr/bin/actualizar
 echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
