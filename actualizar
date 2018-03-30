@@ -18,8 +18,9 @@ rm -f /var/lib/apt/lists/lock
 apt -q update
 apt -y --allow-unauthenticated dist-upgrade
 apt -y autoremove
-apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
+apt autoclean
 apt clean
+apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 update-grub2
 prelink -amR
 history -c
