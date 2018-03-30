@@ -1,4 +1,16 @@
-commit 392c93fecdf98a4d453cb57e6ac069df39b79f1a (HEAD -> master, origin/master, origin/HEAD)
+commit 0901f4d1920528827ba1edd454aeb8c480e04184 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 30 10:45:29 2018 -0400
+
+    * se agrega otra limpieza
+
+commit a3e267b5e8ac923d55b4ada53dda50c5b162c68a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 29 14:55:17 2018 -0400
+
+    * changelog
+
+commit 392c93fecdf98a4d453cb57e6ac069df39b79f1a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Mar 29 14:55:00 2018 -0400
 
