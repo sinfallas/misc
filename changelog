@@ -1,4 +1,10 @@
-commit 0901f4d1920528827ba1edd454aeb8c480e04184 (HEAD -> master, origin/master, origin/HEAD)
+commit 4d5e52516e1e88847fd82c72345143afb7a24825 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 30 10:45:54 2018 -0400
+
+    * changelog
+
+commit 0901f4d1920528827ba1edd454aeb8c480e04184
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 30 10:45:29 2018 -0400
 
@@ -647,7 +653,7 @@ Date:   Fri Oct 10 20:27:03 2014 -0430
 
     * misc
 
-commit 5c787ab5363f07e0d22b8878a179553de8c14c39 (tag: v0.1)
+commit 5c787ab5363f07e0d22b8878a179553de8c14c39
 Author: sinfallas <sinfallas@gmail.com>
 Date:   Thu Oct 9 15:23:31 2014 -0430
 
