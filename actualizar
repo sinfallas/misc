@@ -3,16 +3,48 @@
 # Licence: GPL-2
 set -eu
 LC_ALL=C
+SECONDS=0
+mylog="/var/log/$(basename $0).log"
+LOCKFILE="/tmp/$(basename $0)_$(whoami)"
+LOCKFD="150"
+
+echo "$BASHPID" > /run/"$(basename $0)".pid
+exec 2>/var/log/$(basename $0).log
+
+function clean_1() {
+	rm -f /run/$(basename $0).pid
+	rm -f /tmp/$(basename $0)_$(whoami)
+	rm -f /var/lib/dpkg/lock
+	rm -f /var/lib/apt/lists/lock
+	rm -rf /tmp/*
+	rm -rf /var/tmp/*
+}
+
+trap "clean_1; exit" 0 1 2 3 15
+
 if [[ "$EUID" != "0" ]]; then
-	echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
 	exit 1
 fi
+
+function lock() {
+	echo {LOCKFD}>$LOCKFILE
+	flock -n $LOCKFD
+}
+
+function exit_error() {
+	echo -e "\e[00;31mYa hay una instancia en ejecución. Saliendo\e[00m"
+	exit 1
+}
+
+lock || exit_error
 
 if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
 	apt -q update
 	apt -qy install deborphan
 fi
 
+echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 rm -f /var/lib/dpkg/lock
 rm -f /var/lib/apt/lists/lock
 apt -q update
@@ -24,7 +56,8 @@ apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 update-grub2
 prelink -amR
 history -c
-rm -rf /tmp/*
-rm -rf /var/tmp/*
+echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
+echo "Duracion $SECONDS" >> $mylog
+echo "" >> $mylog
 echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
