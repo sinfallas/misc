@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
-set -eu
+set -euo pipefail
 LC_ALL=C
 SECONDS=0
 mylog="/var/log/$(basename $0).log"
@@ -21,7 +21,7 @@ function clean_1() {
 }
 
 trap "clean_1; exit" 0 1 2 3 15
-
+clear
 if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
 	exit 1
@@ -45,6 +45,7 @@ if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborp
 fi
 
 echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
+echo -e "\e[00;1;92mIniciando Actualizacion\e[00m"
 rm -f /var/lib/dpkg/lock
 rm -f /var/lib/apt/lists/lock
 apt -q update
