@@ -1,4 +1,16 @@
-commit 2fa416d0e126a1e1175b75f6216e3d779bceafec (HEAD -> master, origin/master, origin/HEAD)
+commit 0764a7ab149c3e3c237a89530c71e731c1c0e2af (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jul 13 20:05:59 2019 -0400
+
+    * se actualiza el script actualizar
+
+commit bc3e52f9a46ea3a6eabdc30d8e7788739092e0c3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Jul 8 19:03:19 2019 -0400
+
+    * changelog
+
+commit 2fa416d0e126a1e1175b75f6216e3d779bceafec
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Jul 8 12:35:35 2019 +0000
 
