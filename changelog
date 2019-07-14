@@ -1,4 +1,17 @@
-commit 0764a7ab149c3e3c237a89530c71e731c1c0e2af (HEAD -> master, origin/master, origin/HEAD)
+commit 2a843cda804f0e6aaf2ce81845e0ed508758b0ca (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 14 19:11:41 2019 -0400
+
+    * se agrega manejo de errores
+    * se agrega clear al inicio
+
+commit 940fbef1c51e1fee7ee802bcbc5bed3c0c045a73
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jul 13 20:06:16 2019 -0400
+
+    * changelog
+
+commit 0764a7ab149c3e3c237a89530c71e731c1c0e2af
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Jul 13 20:05:59 2019 -0400
 
