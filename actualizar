@@ -3,15 +3,13 @@
 # Licence: GPL-2
 set -eu
 LC_ALL=C
-IFS=" "
 SECONDS=0
-fecha2=$(date +%d/%m/%Y-%I:%M)
 mylog="/var/log/$(basename $0).log"
 LOCKFILE="/tmp/$(basename $0)_$(whoami)"
 LOCKFD="150"
 
 echo "$BASHPID" > /run/"$(basename $0)".pid
-exec 2>>$mylog
+exec 2>/var/log/$(basename $0).log
 
 function clean_1() {
 	rm -f /run/$(basename $0).pid
@@ -35,33 +33,35 @@ function lock() {
 }
 
 function exit_error() {
-    echo "ERROR: Ya hay una instancia en ejecución. Saliendo $fecha2" >> $mylog
 	echo -e "\e[00;31mYa hay una instancia en ejecución. Saliendo\e[00m"
 	exit 1
 }
 
 lock || exit_error
-clear
 
 if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
 	apt -q update
 	apt -qy install deborphan
 fi
 
-echo "Iniciando Actualizacion $fecha2" >> $mylog
+echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 rm -f /var/lib/dpkg/lock
 rm -f /var/lib/apt/lists/lock
 apt -q update
-apt -y --allow-unauthenticated dist-upgrade
+apt-fast -y --allow-unauthenticated dist-upgrade
+echo -e "\e[00;1;92mLimpiar\e[00m"
 apt -y autoremove
 apt autoclean
 apt clean
+echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
+echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
+echo -e "\e[00;1;92mPrelink\e[00m"
 prelink -amR
 history -c
-echo "Finalizado $fecha2" >> $mylog
-echo "Duracion $SECONDS segundos." >> $mylog
+echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
+echo "Duracion $SECONDS" >> $mylog
 echo "" >> $mylog
 echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
