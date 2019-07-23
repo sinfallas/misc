@@ -14,6 +14,7 @@ exec 2>/var/log/$(basename $0).log
 function clean_1() {
 	rm -f /run/$(basename $0).pid
 	rm -f /tmp/$(basename $0)_$(whoami)
+	killall -q apt dpkg
 	rm -f /var/lib/dpkg/lock
 	rm -f /var/lib/apt/lists/lock
 	rm -rf /tmp/*
