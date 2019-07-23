@@ -1,4 +1,16 @@
-commit 2a843cda804f0e6aaf2ce81845e0ed508758b0ca (HEAD -> master, origin/master, origin/HEAD)
+commit 78ada756e069084403b5a375548718a97e4ec36a (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Jul 23 19:34:48 2019 -0400
+
+    * update
+
+commit b4e88da0121f9d6c0235e5b9421f09de9b8d05b1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 14 19:12:10 2019 -0400
+
+    * changelog
+
+commit 2a843cda804f0e6aaf2ce81845e0ed508758b0ca
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Jul 14 19:11:41 2019 -0400
 
