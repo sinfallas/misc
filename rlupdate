@@ -3,19 +3,20 @@
 # Licence: GPL-2
 set -euo pipefail
 LC_ALL=C
+mi=$(who | uniq | awk '{print $1}')
 
 if [[ "$EUID" != "0" ]]; then
 	echo "ERROR: Debes ser root."
 	exit 1
 fi
 
-if ! [[ -f /home/sinfallas/Downloads/RuneLite.AppImage ]]; then
+if ! [[ -f /home/$mi/Downloads/RuneLite.AppImage ]]; then
 	echo "No existe el fichero de actualizacion."
 	exit 1
 fi
 
 rm -f /usr/bin/RuneLite.AppImage
-mv -f /home/sinfallas/Downloads/RuneLite.AppImage /usr/bin/
+mv -f /home/$mi/Downloads/RuneLite.AppImage /usr/bin/
 chmod +x /usr/bin/RuneLite.AppImage
 printf '[Desktop Entry]\nEncoding=UTF-8\nType=Application\nExec=/usr/bin/RuneLite.AppImage --mode=OFF\nName=RuneLite\nComment=RuneLite launcher' > /usr/share/applications/runelite.desktop
 
