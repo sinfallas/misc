@@ -7,16 +7,18 @@ SECONDS=0
 mylog="/var/log/$(basename $0).log"
 LOCKFILE="/tmp/$(basename $0)_$(whoami)"
 LOCKFD="150"
+lock1="/var/lib/dpkg/lock"
+lock2="/var/lib/apt/lists/lock"
 
-echo "$BASHPID" > /run/"$(basename $0)".pid
-exec 2>/var/log/$(basename $0).log
+echo $BASHPID > /run/"$(basename $0)".pid
+exec 2>>$mylog
 
 function clean_1() {
 	rm -f /run/$(basename $0).pid
-	rm -f /tmp/$(basename $0)_$(whoami)
+	rm -f $LOCKFILE
 	killall -q apt dpkg
-	rm -f /var/lib/dpkg/lock
-	rm -f /var/lib/apt/lists/lock
+	rm -f $lock1
+	rm -f $lock2
 	rm -rf /tmp/*
 	rm -rf /var/tmp/*
 }
@@ -47,8 +49,8 @@ fi
 
 echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 echo -e "\e[00;1;92mIniciando Actualizacion\e[00m"
-rm -f /var/lib/dpkg/lock
-rm -f /var/lib/apt/lists/lock
+rm -f $lock1
+rm -f $lock2
 apt -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mLimpiar\e[00m"
@@ -56,7 +58,7 @@ apt -y autoremove
 apt autoclean
 apt clean
 echo -e "\e[00;1;92mDeborphan\e[00m"
-apt -y purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
+apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
 echo -e "\e[00;1;92mPrelink\e[00m"
