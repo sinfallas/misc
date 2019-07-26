@@ -1,4 +1,16 @@
-commit b019e8ae6d6ae77689fdb999adabb597e1302a77 (HEAD -> master, origin/master, origin/HEAD)
+commit ad24c4fa720e9cf59ed144849aaa2cf88aaa8a20 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Jul 25 22:00:12 2019 -0400
+
+    * variable de usuario
+
+commit ef6bbe0c1b52743d2c0af723b0d8b6604da377e6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Jul 25 21:38:59 2019 -0400
+
+    * changelog
+
+commit b019e8ae6d6ae77689fdb999adabb597e1302a77
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Jul 25 21:38:40 2019 -0400
 
