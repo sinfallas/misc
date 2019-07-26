@@ -1,4 +1,16 @@
-commit 78ada756e069084403b5a375548718a97e4ec36a (HEAD -> master, origin/master, origin/HEAD)
+commit b019e8ae6d6ae77689fdb999adabb597e1302a77 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Jul 25 21:38:40 2019 -0400
+
+    * script para actualizar runelite
+
+commit 09165c674f1f7a5822fa6c68f3a0fa4dc9e232d0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Jul 23 19:34:59 2019 -0400
+
+    * changelog
+
+commit 78ada756e069084403b5a375548718a97e4ec36a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Jul 23 19:34:48 2019 -0400
 
