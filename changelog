@@ -1,4 +1,16 @@
-commit ad24c4fa720e9cf59ed144849aaa2cf88aaa8a20 (HEAD -> master, origin/master, origin/HEAD)
+commit ccf1548afd1b44e1f8b3d56a7477acf58d84a463 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Aug 27 20:01:37 2019 -0400
+
+    * se agregan script de otros repos
+
+commit 3581d0d2d57157517f3c0e60754a4af12fc0045c
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Jul 25 22:00:24 2019 -0400
+
+    * changelog
+
+commit ad24c4fa720e9cf59ed144849aaa2cf88aaa8a20
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Jul 25 22:00:12 2019 -0400
 
