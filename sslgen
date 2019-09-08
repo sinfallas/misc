@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+IFS=" "
+
+apt-get -q update
+apt-get install openssl
+openssl genrsa -out server.key 2048
+# openssl req -out geekflare.csr -newkey rsa:2048 -nodes -keyout geekflare.key
+openssl req -new -key server.key -out server.csr
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+mkdir -p /etc/ssl/certs
+mv server.crt /etc/ssl/certs/ssl.crt
+mv server.key /etc/ssl/certs/ssl.key
+a2enmod ssl
+a2enmod rewrite
+systemctl restart apache2
+
+echo "<IfModule mod_ssl.c>" > /etc/apache2/sites-available/default-ssl.conf
+echo "  <VirtualHost _default_:443>" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    ServerName myserver.com" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    ServerAdmin admin@myserver.com" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    DocumentRoot /var/www" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    <Directory />" >> /etc/apache2/sites-available/default-ssl.conf
+echo "        Options FollowSymLinks" >> /etc/apache2/sites-available/default-ssl.conf
+echo "        AllowOverride None" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    </Directory>" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    <Directory /var/www/>" >> /etc/apache2/sites-available/default-ssl.conf
+echo "      Options -Indexes FollowSymLinks MultiViews" >> /etc/apache2/sites-available/default-ssl.conf
+echo "      AllowOverride None" >> /etc/apache2/sites-available/default-ssl.conf
+echo "      Order allow,deny" >> /etc/apache2/sites-available/default-ssl.conf
+echo "      allow from all" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    </Directory>" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    LogLevel warn" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    CustomLog ${APACHE_LOG_DIR}/ssl_access.log combined" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    SSLEngine on" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    SSLCertificateKeyFile /etc/ssl/certs/ssl.key" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    SSLCertificateFile /etc/ssl/certs/ssl.crt" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    #SSLCACertificateFile /etc/ssl/certs/bundle.crt" >> /etc/apache2/sites-available/default-ssl.conf
+echo '    BrowserMatch "MSIE [2-6]" \' >> /etc/apache2/sites-available/default-ssl.conf
+echo '      nokeepalive ssl-unclean-shutdown \' >> /etc/apache2/sites-available/default-ssl.conf
+echo "      downgrade-1.0 force-response-1.0" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    # MSIE 7 and newer should be able to use keepalive" >> /etc/apache2/sites-available/default-ssl.conf
+echo "    BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown" >> /etc/apache2/sites-available/default-ssl.conf
+echo "  </VirtualHost>" >> /etc/apache2/sites-available/default-ssl.conf
+echo "</IfModule>" >> /etc/apache2/sites-available/default-ssl.conf
+
+a2ensite default-ssl
+systemctl restart apache2
+
+exit 0

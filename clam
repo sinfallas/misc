@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+IFS=" "
+
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debe ser root.\e[00m"
+	exit 1
+fi
+
+# clamscan -r /home/
+clamscan --infected --remove --recursive /home/
+clamscan --infected --remove --recursive /var/www/html/
+clamscan --infected --remove --recursive /var/spool/squid/
+clamscan --infected --remove --recursive /var/opt/gitlab/git-data/
+rkhunter -c --sk --enable all 
+
+# En el archivo /etc/default/rkhunter se define que las actualizaciones de la base de datos sean semanales, que la verificación de rootkits sea diaria y que los resultados sean enviados por e-mail al administrador del sistema (root).
+
+exit 0
