@@ -1,4 +1,18 @@
-commit 4d8a79fac16852c6abff607e0bb2a3d089858bfb (HEAD -> master, origin/master, origin/HEAD)
+commit a9b59d2d04d8ef5b26b96fc70ce690ccebf7f37d (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 8 14:17:26 2019 -0400
+
+    * se agrega script de clam (antivirus)
+    * se agrega php con redireccion
+    * se agrega script para crear certificado ssl
+
+commit 4e6b138376b5f729a39f89a7d81df8ef9eda77c3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 8 14:07:28 2019 -0400
+
+    * changelog
+
+commit 4d8a79fac16852c6abff607e0bb2a3d089858bfb
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Sep 8 14:07:12 2019 -0400
 
