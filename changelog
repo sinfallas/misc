@@ -1,4 +1,16 @@
-commit ccf1548afd1b44e1f8b3d56a7477acf58d84a463 (HEAD -> master, origin/master, origin/HEAD)
+commit 4d8a79fac16852c6abff607e0bb2a3d089858bfb (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 8 14:07:12 2019 -0400
+
+    * se agrega dos cosas
+
+commit 276087b416f0cdbc10d790b73e86b03ce420e477
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Aug 27 20:01:56 2019 -0400
+
+    * changelog
+
+commit ccf1548afd1b44e1f8b3d56a7477acf58d84a463
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Aug 27 20:01:37 2019 -0400
 
