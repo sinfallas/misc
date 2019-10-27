@@ -1,4 +1,16 @@
-commit a9b59d2d04d8ef5b26b96fc70ce690ccebf7f37d (HEAD -> master, origin/master, origin/HEAD)
+commit 097a63f3f253d5261f71359635f779e6f61e4d1b (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 26 22:31:00 2019 -0400
+
+    * se elimina el script armar-work
+
+commit 5676bd60f4b9859d274142b230016e391b19d094
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Sep 8 14:18:11 2019 -0400
+
+    * changelog
+
+commit a9b59d2d04d8ef5b26b96fc70ce690ccebf7f37d
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Sep 8 14:17:26 2019 -0400
 
