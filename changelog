@@ -1,4 +1,16 @@
-commit 097a63f3f253d5261f71359635f779e6f61e4d1b (HEAD -> master, origin/master, origin/HEAD)
+commit d3dfa972388a00aca0bbc9e765533c13eac7f7ce (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Feb 2 12:07:33 2020 -0400
+
+    * mssqlubuntu
+
+commit c15c04bcbe3c5dee15f3fccf37e9a147ffbb34c8
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Oct 26 22:31:21 2019 -0400
+
+    * changelog
+
+commit 097a63f3f253d5261f71359635f779e6f61e4d1b
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Oct 26 22:31:00 2019 -0400
 
