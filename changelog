@@ -1,4 +1,16 @@
-commit d3dfa972388a00aca0bbc9e765533c13eac7f7ce (HEAD -> master, origin/master, origin/HEAD)
+commit 1714b3a168d9f13a62df6fc0cbef271c1aa2678e (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Feb 2 12:10:07 2020 -0400
+
+    * mas dependencias
+
+commit 09ad36626b9bf06fd1cbb09a73306291b152de00
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Feb 2 12:07:48 2020 -0400
+
+    * changelog
+
+commit d3dfa972388a00aca0bbc9e765533c13eac7f7ce
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Feb 2 12:07:33 2020 -0400
 
