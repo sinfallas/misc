@@ -59,11 +59,22 @@ apt autoclean
 apt clean
 echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
+echo -e "\e[00;1;92mInitramfs\e[00m"
+update-initramfs -k all -u
 echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
 echo -e "\e[00;1;92mPrelink\e[00m"
 prelink -amR
 history -c
+echo -e "\e[00;1;92mLimpiando servicios\e[00m"
+systemctl disable ModemManager.service
+systemctl disable avahi-daemon.service
+systemctl disable speech-dispatcher.service
+systemctl disable pppd-dns.service
+systemctl disable snapd.service
+systemctl disable snapd.seeded.service
+systemctl disable unattended-upgrades
+systemctl disable libvirtd
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS" >> $mylog
 echo "" >> $mylog
