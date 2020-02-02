@@ -50,7 +50,7 @@ fi
 sysctl -p
 
 apt -q update
-apt -y install libcurl3 curl
+apt -y install libcurl3 curl sudo htop oitop iftop powertop
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list
