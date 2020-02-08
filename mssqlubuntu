@@ -50,7 +50,7 @@ fi
 sysctl -p
 
 apt -q update
-apt -y install libcurl3 curl sudo htop oitop iftop powertop
+apt -y install libcurl3 curl sudo htop oitop iftop powertop samba
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list
@@ -70,5 +70,6 @@ ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /opt/mssql/lib/libcrypto.so
 systemctl start mssql-server
 /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 systemctl restart mssql-server
+mkdir -p /var/opt/mssql/data/back
 
 exit 0
