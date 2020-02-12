@@ -51,6 +51,58 @@ sysctl -p
 
 apt -q update
 apt -y install libcurl3 curl sudo htop oitop iftop powertop samba
+mv -fv /etc/samba/smb.conf /etc/samba/smb.conf.old
+
+cat <<EOF >>/etc/samba/smb.conf
+[global]
+        pam password change = yes
+        dns proxy = no
+        panic action = /usr/share/samba/panic-action %d
+        map to guest = bad user
+        passwd program = /usr/bin/passwd %u
+        workgroup = WORKGROUP
+        passdb backend = tdbsam
+        log file = /var/log/samba/log.%m
+        max log size = 1000
+        server string = %h server (Samba, Ubuntu)
+        netbios name = ubuntusql
+        netbios aliases = ubuntusql
+        unix password sync = yes
+        passwd chat = *Enter\snew\s*\spassword:* %n\n *Retype\snew\s*\spassword:* %n\n *password\supdated\ssuccessfully* .
+        default = logshipping
+        usershare allow guests = yes
+        os level = 20
+        server role = standalone server
+        obey pam restrictions = yes
+
+[printers]
+   comment = All Printers
+   browseable = no
+   path = /var/spool/samba
+   printable = yes
+   guest ok = no
+   read only = yes
+   create mask = 0700
+
+[print$]
+   comment = Printer Drivers
+   path = /var/lib/samba/printers
+   browseable = yes
+   read only = yes
+   guest ok = no
+
+[logshipping]
+        path = /var/opt/mssql/data/casa
+        delete readonly = yes
+        wide links = no
+        valid users = sqlserver,mssql
+        write list = mssql
+        force user = root
+        public = yes
+        writeable = yes
+EOF
+systemctl restart smbd
+
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list
