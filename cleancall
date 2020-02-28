@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: debe ser root.\e[00m"
+	exit 1
+fi
+clear
+for i in $(find /var/spool/asterisk/monitor . -name "*.gsm" -mtime +30); do
+	rm -fv $i
+done
+
+echo "Finalizado."
+
+exit 0
