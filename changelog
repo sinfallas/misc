@@ -1,4 +1,35 @@
-commit c47d60a61463db603139582d22a71c4944e110e9 (HEAD -> master, origin/master, origin/HEAD)
+commit 7f51dc7bd6219c0dfb1c270d1843147638d115c8 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 20 07:56:16 2020 -0400
+
+    * mywol
+
+commit f846be264d74961ae680b738f595d416e27ce9e7
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Feb 28 14:56:01 2020 +0000
+
+    Add new file
+
+commit 74afcf6c2ef2752dbce955fe2d0e0b60d67128d1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Feb 12 15:00:56 2020 +0000
+
+    * reorganizacion
+    * creacion de carpetas
+
+commit 3b0e6932285d87d256c45fb9ce8d0cd98611709d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Feb 12 14:50:11 2020 +0000
+
+    Update mssqlubuntu
+
+commit e9b54aded540c3f16f96ae5e3d4ccc5571c7b7e3
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Feb 8 16:43:02 2020 -0400
+
+    * changelog
+
+commit c47d60a61463db603139582d22a71c4944e110e9
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Feb 8 16:42:49 2020 -0400
 
