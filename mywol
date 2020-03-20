@@ -7,7 +7,8 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: must be root\e[00m"
 	exit 1
 fi
-
+echo $1
 echo -e $(echo $(printf 'f%.0s' {1..12}; printf "$(echo $1 | sed 's/://g')%.0s" {1..16}) | sed -e 's/../\\x&/g') | nc -w1 -u -b 255.255.255.255 4000
+echo -e $(echo $(printf 'f%.0s' {1..12}; printf "$(echo $1 | sed 's/://g')%.0s" {1..16}) | sed -e 's/../\\x&/g') | nc -w1 -u -b 255.255.255.255 9
 
 exit 0
