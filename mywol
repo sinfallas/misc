@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+set -eu
+LC_ALL=C
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: must be root\e[00m"
+	exit 1
+fi
+
+echo -e $(echo $(printf 'f%.0s' {1..12}; printf "$(echo $1 | sed 's/://g')%.0s" {1..16}) | sed -e 's/../\\x&/g') | nc -w1 -u -b 255.255.255.255 4000
+
+exit 0
