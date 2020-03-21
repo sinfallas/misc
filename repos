@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+
+#anydesk
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+
+#apt-fast
+add-apt-repository -y ppa:apt-fast/stable
+
+#stuff
+add-apt-repository -y ppa:sinfallas/stuff
+
+#linrunner (tlp)
+add-apt-repository -y ppa:linrunner/tlp
+
+exit 0
