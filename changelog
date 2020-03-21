@@ -1,4 +1,22 @@
-commit d5dc66a5498884f7ee055a9d16d163e081997ed6 (HEAD -> master, origin/master, origin/HEAD)
+commit c02ba8d2757dc9f976216ec3faf0349964ac7287 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 21 12:22:08 2020 -0400
+
+    * se agrega apt
+
+commit 0bb11afff42bc259b3c4b74ee609bb43273ecbfd
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 21 12:21:29 2020 -0400
+
+    * bugfix
+
+commit be249aa7bc3710b4aecdafc058999df05a107b9a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 21 12:20:57 2020 -0400
+
+    * changelog
+
+commit d5dc66a5498884f7ee055a9d16d163e081997ed6
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Mar 21 12:20:37 2020 -0400
 
