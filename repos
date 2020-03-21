@@ -12,4 +12,6 @@ add-apt-repository -y ppa:apt-fast/stable
 #linrunner (tlp)
 add-apt-repository -y ppa:linrunner/tlp
 
+apt -y install anydesk apt-fast tlp
+
 exit 0
