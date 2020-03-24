@@ -1,4 +1,16 @@
-commit 8c930936974c5e0c62dffb5249ca881226b3d0af (HEAD -> master, origin/master, origin/HEAD)
+commit 6cdbcf60878ed0b2a5b29d5c7b2fa9371138c2bd (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Mar 24 10:57:50 2020 -0400
+
+    * nuevos puertos
+
+commit 60991f1ec9bedfabf23a65df9522ad93d15e8e09
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Mar 24 10:30:38 2020 -0400
+
+    * changelog
+
+commit 8c930936974c5e0c62dffb5249ca881226b3d0af
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Mar 24 10:30:29 2020 -0400
 
