@@ -1,4 +1,17 @@
-commit 6cdbcf60878ed0b2a5b29d5c7b2fa9371138c2bd (HEAD -> master, origin/master, origin/HEAD)
+commit 57eb2ba7bed71a935a0bc5d29e5684bdd9c188a1 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 26 10:34:47 2020 -0400
+
+    * nuevos repos
+    * verificacion de root
+
+commit 6c2193de22b6b75c1bb26a796a6a32d7d1f2ae6a
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Mar 24 10:58:01 2020 -0400
+
+    * changelog
+
+commit 6cdbcf60878ed0b2a5b29d5c7b2fa9371138c2bd
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Mar 24 10:57:50 2020 -0400
 
