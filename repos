@@ -2,9 +2,18 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+	exit 1
+fi
+
 #anydesk
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
-echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+echo "deb http://deb.anydesk.com/ all main" | tee /etc/apt/sources.list.d/anydesk-stable.list
+
+#brave
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | tee /etc/apt/sources.list.d/brave-browser-release.list
 
 #apt-fast
 add-apt-repository -y ppa:apt-fast/stable
@@ -12,6 +21,7 @@ add-apt-repository -y ppa:apt-fast/stable
 #linrunner (tlp)
 add-apt-repository -y ppa:linrunner/tlp
 
-apt -y install anydesk apt-fast tlp
+apt update -qq
+apt -y install anydesk apt-fast tlp brave-browser
 
 exit 0
