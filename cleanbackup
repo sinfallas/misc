@@ -47,10 +47,12 @@ echo "Comprobando espacio en HDD. $fecha2" >> $lock
 if (($espacio1 < 4096000)); then
         cd $donde
         find . -type f -name '*.tar' -mtime +15 -exec rm {} \;
-        echo "Se eliminaron archivos de mas de 30 dias en el directorio $donde" >> $lock
-	echo "Se eliminaron archivos de mas de 30 dias en el directorio $donde"
+        echo "Se eliminaron archivos de mas de 15 dias en el directorio $donde" >> $lock
+	echo "Se eliminaron archivos de mas de 15 dias en el directorio $donde"
 fi
 
+echo "Duracion $SECONDS segundos" >> $lock
+echo "Duracion $SECONDS segundos"
 echo "Finalizado." >> $lock
 echo "Finalizado."
 exit 0
