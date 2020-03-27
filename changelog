@@ -1,4 +1,16 @@
-commit 57eb2ba7bed71a935a0bc5d29e5684bdd9c188a1 (HEAD -> master, origin/master, origin/HEAD)
+commit 07224306d82f0cffe01683a03799d1bff706172c (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 27 16:35:04 2020 -0400
+
+    * script de limpieza de backup para proxmox
+
+commit 64582747dc42a65056997ae429b450991fa615df
+Author: jose perez <sinfallas@gmail.com>
+Date:   Thu Mar 26 10:35:14 2020 -0400
+
+    * changelog
+
+commit 57eb2ba7bed71a935a0bc5d29e5684bdd9c188a1
 Author: jose perez <sinfallas@gmail.com>
 Date:   Thu Mar 26 10:34:47 2020 -0400
 
