@@ -25,8 +25,8 @@ function lock() {
 }
 
 function exit_error() {
-        echo "ERROR: Ya hay una instancia en ejecuci  n. Saliendo $fecha2" >> $lock
-        echo "ERROR: Ya hay una instancia en ejecuci  n. Saliendo"
+        echo "ERROR: Ya hay una instancia en ejecucion. Saliendo $fecha2" >> $lock
+        echo "ERROR: Ya hay una instancia en ejecucion. Saliendo"
         exit 1
 }
 
