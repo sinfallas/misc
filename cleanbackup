@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+IFS=" "
+SECONDS=0
+echo "$BASHPID" > /run/$(basename $0).pid
+lock="/var/log/$(basename $0).log"
+LOCKFILE="/tmp/$(basename $0)_$(whoami)"
+LOCKFD="150"
+fecha2=$(date +%d/%m/%Y-%I:%M)
+#aca debes colocar la direccion del dispositivo
+espacio1=$(df -m | grep /dev/sdb1 | awk '{print $4}')
+#aca debes colocar el directorio de los respaldos
+donde="/var/lib/vz/dump/"
+
+function clean_1() {
+        rm -f /run/$(basename $0).pid
+        rm -f /tmp/$(basename $0)_$(whoami)
+}
+
+function lock() {
+        echo {LOCKFD}>$LOCKFILE
+        flock -n $LOCKFD
+}
+
+function exit_error() {
+        echo "ERROR: Ya hay una instancia en ejecuci  n. Saliendo $fecha2" >> $lock
+        echo "ERROR: Ya hay una instancia en ejecuci  n. Saliendo"
+        exit 1
+}
+
+trap "clean_1; exit" 0 1 2 3 15
+exec 2>>$lock
+
+if [[ "$EUID" != "0" ]]; then
+        echo "ERROR: Debe ser root"
+        exit 1
+fi
+
+lock || exit_error
+clear
+
+echo "" >> $lock
+echo "Comprobando espacio en HDD. $fecha2" >> $lock
+# aca colocas la cantidad de espacio minimo libre, esta en 4 GB
+if (($espacio1 < 4096000)); then
+        cd $donde
+        find . -type f -name '*.tar' -mtime +15 -exec rm {} \;
+        echo "Se eliminaron archivos de mas de 30 dias en el directorio $donde" >> $lock
+fi
+
+exit 0

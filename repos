@@ -21,7 +21,10 @@ add-apt-repository -y ppa:apt-fast/stable
 #linrunner (tlp)
 add-apt-repository -y ppa:linrunner/tlp
 
+#haguichi (gui para hamachi)
+add-apt-repository -y ppa:webupd8team/haguichi
+
 apt update -qq
-apt -y install anydesk apt-fast tlp brave-browser
+apt -y install anydesk apt-fast tlp brave-browser haguichi
 
 exit 0
