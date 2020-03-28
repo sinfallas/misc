@@ -1,4 +1,16 @@
-commit 2d595604b9c778aacba093504d3ea95c89af5929 (HEAD -> master, origin/master, origin/HEAD)
+commit 7a070521db4311ecaa47d2a05fa15ef429984108 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 28 12:23:14 2020 -0400
+
+    * se agrega chrome
+
+commit 16821caf2392ad141724e54858d2824eab3912d4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 27 16:48:13 2020 -0400
+
+    * changelog
+
+commit 2d595604b9c778aacba093504d3ea95c89af5929
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 27 16:47:56 2020 -0400
 
