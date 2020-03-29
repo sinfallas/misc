@@ -1,4 +1,16 @@
-commit 7a070521db4311ecaa47d2a05fa15ef429984108 (HEAD -> master, origin/master, origin/HEAD)
+commit ddb97554050078ab124a220508a255e573d78638 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 28 21:15:59 2020 -0400
+
+    * nuevo repo
+
+commit d5ac6a4df22b4b45c97282497dfdab95946f45ce
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 28 12:23:31 2020 -0400
+
+    * changelog
+
+commit 7a070521db4311ecaa47d2a05fa15ef429984108
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Mar 28 12:23:14 2020 -0400
 
