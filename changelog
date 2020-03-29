@@ -1,4 +1,16 @@
-commit 1b4b3ca46e045b2080d9be27403582f590b6b468 (HEAD -> master, origin/master, origin/HEAD)
+commit b9a82415fcbd5e6152ae0192d732473a28e3608e (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Mar 29 16:28:49 2020 -0400
+
+    * se agrega otra linea de limpieza
+
+commit 0470b1a11c378853f677bbb1b307a79504eb881d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Mar 29 13:42:43 2020 -0400
+
+    * changelog
+
+commit 1b4b3ca46e045b2080d9be27403582f590b6b468
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Mar 29 13:42:26 2020 -0400
 
