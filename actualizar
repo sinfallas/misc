@@ -78,6 +78,7 @@ systemctl disable unattended-upgrades
 systemctl disable clamav-freshclam
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS" >> $mylog
+echo "Duracion $SECONDS"
 echo "" >> $mylog
 echo -e "\e[00;1;92mFinalizado...\e[00m"
 exit 0
