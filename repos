@@ -7,6 +7,10 @@ if [[ "$EUID" != "0" ]]; then
 	exit 1
 fi
 
+#driver video
+add-apt-repository -y ppa:oibaf/graphics-drivers
+add-apt-repository -y ppa:ubuntu-x-swat/updates
+
 #anydesk
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
 echo "deb http://deb.anydesk.com/ all main" | tee /etc/apt/sources.list.d/anydesk-stable.list
@@ -37,5 +41,9 @@ apt -y install anydesk apt-fast tlp brave-browser google-chrome-stable jellyfin
 usermod -aG video jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
+
+apt -y dist-upgrade
+glxinfo | grep "OpenGL version"
+glxinfo | egrep "OpenGL vendor|OpenGL renderer"
 
 exit 0

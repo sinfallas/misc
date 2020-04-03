@@ -8,7 +8,7 @@ echo "$BASHPID" > /run/$(basename $0).pid
 lock="/var/log/$(basename $0).log"
 LOCKFILE="/tmp/$(basename $0)_$(whoami)"
 LOCKFD="150"
-fecha2=$(date +%d/%m/%Y-%I:%M)
+fecha2=$(date +%d/%m/%Y-%I:%M_%p)
 #aca debes colocar la direccion del dispositivo
 espacio1=$(df -m | grep /dev/sdb1 | awk '{print $4}')
 #aca debes colocar el directorio de los respaldos
