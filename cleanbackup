@@ -43,6 +43,7 @@ clear
 
 echo "" >> $lock
 echo "Comprobando espacio en HDD. $fecha2" >> $lock
+echo "Comprobando espacio en HDD. $fecha2"
 # aca colocas la cantidad de espacio minimo libre, esta en 4 GB
 if (($espacio1 < 4096000)); then
         cd $donde
