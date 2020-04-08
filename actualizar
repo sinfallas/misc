@@ -74,6 +74,8 @@ systemctl disable pppd-dns.service
 systemctl disable snapd.service
 systemctl disable snapd.seeded.service
 systemctl disable unattended-upgrades
+systemctl disable nmbd
+systemctl disable apt-daily
 #systemctl disable libvirtd
 systemctl disable clamav-freshclam
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
