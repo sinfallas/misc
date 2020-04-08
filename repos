@@ -37,7 +37,7 @@ echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu
 wget -O - https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | apt-key add -
 
 apt update -qq
-apt -y install anydesk apt-fast tlp brave-browser google-chrome-stable jellyfin
+apt -y install anydesk apt-fast brave-browser google-chrome-stable jellyfin
 usermod -aG video jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
