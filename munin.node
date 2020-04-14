@@ -1,0 +1,2 @@
+mkdir -p /var/log/munin/
+touch /var/log/munin/munin-node.log
