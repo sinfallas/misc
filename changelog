@@ -1,4 +1,16 @@
-commit f46f8ff5d8f82aac51df4638ff62a173eb1f0900 (HEAD -> master, origin/master, origin/HEAD)
+commit b8dfed52a64fbae1b6e4aad1fb6339dc617ad588 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Apr 24 19:11:15 2020 -0400
+
+    * livepatch
+
+commit 234abb9d99010ce29c2b542b21ac05a66f74f942
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Apr 13 23:02:24 2020 -0400
+
+    * changelog
+
+commit f46f8ff5d8f82aac51df4638ff62a173eb1f0900
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Apr 13 23:02:02 2020 -0400
 
