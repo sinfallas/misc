@@ -45,6 +45,9 @@ usermod -aG video jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
 
+snap install canonical-livepatch
+ln -s /snap/bin/canonical-livepatch /usr/bin/canonical-livepatch
+
 apt -y dist-upgrade
 glxinfo | grep "OpenGL version"
 glxinfo | egrep "OpenGL vendor|OpenGL renderer"
