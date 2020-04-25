@@ -42,6 +42,7 @@ add-apt-repository -y ppa:mmstick76/alacritty
 apt update -qq
 apt -y install anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty
 usermod -aG video jellyfin
+usermod -aG render jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
 
