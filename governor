@@ -1,0 +1,17 @@
+cat << EOF | tee /etc/systemd/system/cpupower.service
+[Unit]
+Description=CPU performance
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cpupower frequency-set -g performance
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl enable cpupower.service
+
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_driver
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
