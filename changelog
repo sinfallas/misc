@@ -1,4 +1,16 @@
-commit c779016a2982f043be71eea7a0163ff70fc1620b (HEAD -> master, origin/master, origin/HEAD)
+commit d7e483a26c3fc67265bc17c96081f7e33d56a2cf (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Apr 24 23:16:38 2020 -0400
+
+    * governor
+
+commit 83f2555d8f1471652315d430aa8b83ece0ac22e6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Apr 24 22:22:21 2020 -0400
+
+    * changelog
+
+commit c779016a2982f043be71eea7a0163ff70fc1620b
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Apr 24 22:21:59 2020 -0400
 
