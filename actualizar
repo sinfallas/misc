@@ -66,7 +66,7 @@ update-grub2
 echo -e "\e[00;1;92mPrelink\e[00m"
 prelink -amR
 history -c
-echo -e "\e[00;1;92mLimpiando servicios\e[00m"
+echo -e "\e[00;1;92mLimpiando servicios y personalizando\e[00m"
 systemctl disable ModemManager.service
 systemctl disable avahi-daemon.service
 systemctl disable speech-dispatcher.service
@@ -78,6 +78,7 @@ systemctl disable nmbd
 systemctl disable apt-daily
 systemctl disable libvirtd
 systemctl disable clamav-freshclam
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS segundos" >> $mylog
 echo "Duracion $SECONDS segundos"
