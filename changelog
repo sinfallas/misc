@@ -1,4 +1,16 @@
-commit da9a725b8b8a2ae12acca1c4237753635d373be9 (HEAD -> master, origin/master, origin/HEAD)
+commit 8c4513ad9b2118f0b75ad44212243a7e6d278d1d (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Apr 27 16:31:58 2020 -0400
+
+    * bashtop
+
+commit 665b533b53c4a7b2584137e00466998c8ae114d2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Apr 24 23:43:34 2020 -0400
+
+    * changelog
+
+commit da9a725b8b8a2ae12acca1c4237753635d373be9
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Apr 24 23:43:21 2020 -0400
 
