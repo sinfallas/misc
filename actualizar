@@ -79,6 +79,9 @@ systemctl disable apt-daily
 systemctl disable libvirtd
 systemctl disable clamav-freshclam
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+chmod -R 700 $(pwd)/.ssh
+chmod -R 700 $(pwd)/.bazaar
+chmod -R 700 $(pwd)/.gnupg
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS segundos" >> $mylog
 echo "Duracion $SECONDS segundos"
