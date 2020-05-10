@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+	exit 1
+fi
+
+/usr/bin/cpupower frequency-set -g powersave
+systemctl stop jellyfin
+systemctl stop avahi-daemon
+systemctl stop accounts-daemon
+systemctl stop cups
+systemctl stop libvirtd
+systemctl stop anydesk
+systemctl stop ModemManager.service
+systemctl stop speech-dispatcher.service
+systemctl stop pppd-dns.service
+systemctl stop snapd.service
+systemctl stop snapd.seeded.service
+systemctl stop unattended-upgrades
+systemctl stop nmbd
+systemctl stop apt-daily
+systemctl stop libvirtd
+systemctl stop clamav-freshclam
+killall canonical-livepatchd
+killall evolution-addressbook-factory
+killall gsd-smartcard
+killall gsd-wacom
+killall Thunar
+clear
+#acpi -V
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+exit 0
