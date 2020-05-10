@@ -1,4 +1,22 @@
-commit 8c4513ad9b2118f0b75ad44212243a7e6d278d1d (HEAD -> master, origin/master, origin/HEAD)
+commit 2a593170f494db183396d1eb0c1f4545bd23448e (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 9 22:49:14 2020 -0400
+
+    * bateria
+
+commit dc1d480d449f7c7575f72db833f5a77cb592ff97
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Apr 27 16:48:30 2020 -0400
+
+    permisos
+
+commit 206f4c83ab0d62017d2728df39dd10b4fe633fd9
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Apr 27 16:33:29 2020 -0400
+
+    * changelog
+
+commit 8c4513ad9b2118f0b75ad44212243a7e6d278d1d
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Apr 27 16:31:58 2020 -0400
 
