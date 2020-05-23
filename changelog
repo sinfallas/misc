@@ -1,4 +1,16 @@
-commit 2a593170f494db183396d1eb0c1f4545bd23448e (HEAD -> master, origin/master, origin/HEAD)
+commit 03f8181b725d7969d1976ed2a37fdeb8cc1085fc (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 14:44:36 2020 -0400
+
+    * se agrega ejecucion de dpkg al salir erroneamente
+
+commit 11ff932ea42a17be90401e2e579543572c83d7e0
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 9 22:49:36 2020 -0400
+
+    * changelog
+
+commit 2a593170f494db183396d1eb0c1f4545bd23448e
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 9 22:49:14 2020 -0400
 
