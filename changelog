@@ -1,4 +1,16 @@
-commit 167939cad1b84070b7e70bf8e2948ad6d1d1eeb4 (HEAD -> master, origin/master, origin/HEAD)
+commit 8f28eb8a379c1352746a11c7365c54a5466ce344 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 22:06:10 2020 -0400
+
+    * limpieza de papelera
+
+commit 3c9740615b74c8422db743c381765948440c0ce2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 21:28:09 2020 -0400
+
+    * changelog
+
+commit 167939cad1b84070b7e70bf8e2948ad6d1d1eeb4
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 23 21:27:38 2020 -0400
 
