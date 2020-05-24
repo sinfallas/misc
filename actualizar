@@ -58,6 +58,8 @@ echo -e "\e[00;1;92mLimpiar\e[00m"
 apt -y autoremove
 apt autoclean
 apt clean
+rm -rf /root/.local/share/Trash/*
+rm -rf /home/*/.local/share/Trash/*
 echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 echo -e "\e[00;1;92mInitramfs\e[00m"
