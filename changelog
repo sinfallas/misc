@@ -1,4 +1,16 @@
-commit b941ebd8999d756dfb4ad7266fc7a7c08af42ef9 (HEAD -> master, origin/master, origin/HEAD)
+commit 6d155493e7fe4abbc762305751a47a5997abf508 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 24 17:49:00 2020 -0400
+
+    * se agrega un validacion de las dependencias necesarias
+
+commit edfa7ef8f9e26aaf42812d3731380b350ae491cc
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 24 11:09:38 2020 -0400
+
+    * changelog
+
+commit b941ebd8999d756dfb4ad7266fc7a7c08af42ef9
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 24 11:09:22 2020 -0400
 
