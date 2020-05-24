@@ -1,4 +1,16 @@
-commit 8f28eb8a379c1352746a11c7365c54a5466ce344 (HEAD -> master, origin/master, origin/HEAD)
+commit 27aa0b7de47c45d751e2ec0173f756b37b2017ae (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 22:31:04 2020 -0400
+
+    * se agrega identificacion de usuario
+
+commit 791feb6f04ec3dd3bf551fbd2a8e644d8e51439d
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 22:06:27 2020 -0400
+
+    * changelog
+
+commit 8f28eb8a379c1352746a11c7365c54a5466ce344
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 23 22:06:10 2020 -0400
 
