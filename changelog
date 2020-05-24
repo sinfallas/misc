@@ -1,4 +1,17 @@
-commit 03f8181b725d7969d1976ed2a37fdeb8cc1085fc (HEAD -> master, origin/master, origin/HEAD)
+commit 167939cad1b84070b7e70bf8e2948ad6d1d1eeb4 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 21:27:38 2020 -0400
+
+    * se actualiza bateria
+    * se cambia el orden de la limpieza en actualizar
+
+commit 3424a02479e725b0d579efcffda2604466a0c87b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 14:45:09 2020 -0400
+
+    * changelog
+
+commit 03f8181b725d7969d1976ed2a37fdeb8cc1085fc
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 23 14:44:36 2020 -0400
 
