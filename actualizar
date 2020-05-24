@@ -10,6 +10,7 @@ LOCKFD="150"
 lock1="/var/lib/dpkg/lock"
 lock2="/var/lib/apt/lists/lock"
 quien=$(who | cut -d' ' -f1 | sort | uniq)
+gdonde="/home/$quien/.gnupg/gpg.conf"
 echo $BASHPID > /run/"$(basename $0)".pid
 exec 2>>$mylog
 
@@ -82,6 +83,7 @@ systemctl disable apt-daily
 systemctl disable libvirtd
 systemctl disable clamav-freshclam
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+chown $quien:$quien $gdonde
 chmod -Rv 700 /home/$quien/.ssh
 chmod -Rv 700 /home/$quien/.bazaar
 chmod -Rv 700 /home/$quien/.gnupg
