@@ -14,7 +14,6 @@ echo $BASHPID > /run/"$(basename $0)".pid
 exec 2>>$mylog
 
 function clean_1() {
-	dpkg --configure -a
 	rm -f /run/$(basename $0).pid
 	rm -f $LOCKFILE
 	killall -q apt dpkg
@@ -22,6 +21,7 @@ function clean_1() {
 	rm -f $lock2
 	rm -rf /tmp/*
 	rm -rf /var/tmp/*
+	dpkg --configure -a
 }
 
 trap "clean_1; exit" 0 1 2 3 15

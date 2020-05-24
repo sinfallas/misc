@@ -30,6 +30,6 @@ killall gsd-smartcard
 killall gsd-wacom
 killall Thunar
 clear
-#acpi -V
+#acpi -Vs
 upower -i /org/freedesktop/UPower/devices/battery_BAT0
 exit 0
