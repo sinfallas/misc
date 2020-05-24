@@ -9,7 +9,7 @@ LOCKFILE="/tmp/$(basename $0)_$(whoami)"
 LOCKFD="150"
 lock1="/var/lib/dpkg/lock"
 lock2="/var/lib/apt/lists/lock"
-
+quien=$(who | cut -d' ' -f1 | sort | uniq)
 echo $BASHPID > /run/"$(basename $0)".pid
 exec 2>>$mylog
 
@@ -82,9 +82,9 @@ systemctl disable apt-daily
 systemctl disable libvirtd
 systemctl disable clamav-freshclam
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-chmod -Rv 700 $(pwd)/.ssh
-chmod -Rv 700 $(pwd)/.bazaar
-chmod -Rv 700 $(pwd)/.gnupg
+chmod -Rv 700 /home/$quien/.ssh
+chmod -Rv 700 /home/$quien/.bazaar
+chmod -Rv 700 /home/$quien/.gnupg
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS segundos" >> $mylog
 echo "Duracion $SECONDS segundos"
