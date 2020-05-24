@@ -49,6 +49,17 @@ if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborp
 	apt -qy install deborphan
 fi
 
+if ! [[ -f /usr/sbin/prelink ]] || [[ $(dpkg --get-selections | grep -w "prelink" | awk '{print $1}' | head -1) != prelink ]]; then
+	apt -q update
+	apt -qy install prelink
+fi
+
+if ! [[ -f /usr/bin/apt-fast ]] || [[ $(dpkg --get-selections | grep -w "apt-fast" | awk '{print $1}' | head -1) != apt-fast ]]; then
+	add-apt-repository -y ppa:apt-fast/stable
+	apt -q update
+	apt -qy install apt-fast
+fi
+
 echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 echo -e "\e[00;1;92mIniciando Actualizacion\e[00m"
 rm -f $lock1
