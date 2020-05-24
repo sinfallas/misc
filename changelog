@@ -1,4 +1,16 @@
-commit 27aa0b7de47c45d751e2ec0173f756b37b2017ae (HEAD -> master, origin/master, origin/HEAD)
+commit b941ebd8999d756dfb4ad7266fc7a7c08af42ef9 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 24 11:09:22 2020 -0400
+
+    * permisos en actualizar
+
+commit d7a73703d5759c0d5b263846ec9ea23e436fed37
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 23 22:31:18 2020 -0400
+
+    * changelog
+
+commit 27aa0b7de47c45d751e2ec0173f756b37b2017ae
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 23 22:31:04 2020 -0400
 
