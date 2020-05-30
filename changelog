@@ -1,4 +1,16 @@
-commit 6d155493e7fe4abbc762305751a47a5997abf508 (HEAD -> master, origin/master, origin/HEAD)
+commit 2a00a03d403f7e1a6458244bc9b97a4a711a5756 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 30 17:02:29 2020 -0400
+
+    * nueva dependencia
+
+commit bc7218e1c39803cd4cb1e9b6daa690a2064d9234
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 24 17:49:21 2020 -0400
+
+    * changelog
+
+commit 6d155493e7fe4abbc762305751a47a5997abf508
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 24 17:49:00 2020 -0400
 
