@@ -1,4 +1,16 @@
-commit 2a00a03d403f7e1a6458244bc9b97a4a711a5756 (HEAD -> master, origin/master, origin/HEAD)
+commit 46e1597f9ebcfed1c793f5afa2c90981e8418f11 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 16:04:12 2020 -0400
+
+    * repo de docker
+
+commit 7ce84e9adbf98b2690041034b86564b415c6c85f
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat May 30 17:02:43 2020 -0400
+
+    * changelog
+
+commit 2a00a03d403f7e1a6458244bc9b97a4a711a5756
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat May 30 17:02:29 2020 -0400
 
