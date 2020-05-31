@@ -56,6 +56,11 @@ usermod -aG render jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
 
+groupadd docker
+usermod -aG docker sinfallas
+newgrp docker
+systemctl disable docker
+
 snap install canonical-livepatch
 ln -s /snap/bin/canonical-livepatch /usr/bin/canonical-livepatch
 
