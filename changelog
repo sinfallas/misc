@@ -1,4 +1,16 @@
-commit 935edc873e1f223f24f57a3a160e00f789d4ca1a (HEAD -> master, origin/master, origin/HEAD)
+commit 1308838d92fc96f16cdb14e5c514bd24e0bee404 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 16:17:43 2020 -0400
+
+    * postinstall docker
+
+commit fa4d9d91dd9659877017be730e016084a72a1759
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 16:06:49 2020 -0400
+
+    * changelog
+
+commit 935edc873e1f223f24f57a3a160e00f789d4ca1a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 31 16:06:14 2020 -0400
 
