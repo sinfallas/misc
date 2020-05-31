@@ -49,7 +49,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 apt update -qq
-apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty bashtop python3-psutil docker-ce docker-ce-cli containerd.io
+apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty bashtop python3-psutil docker-ce docker-ce-cli containerd.io xrdp
 
 usermod -aG video jellyfin
 usermod -aG render jellyfin
@@ -63,6 +63,9 @@ systemctl disable docker
 
 snap install canonical-livepatch
 ln -s /snap/bin/canonical-livepatch /usr/bin/canonical-livepatch
+
+adduser xrdp ssl-cert
+systemctl restart xrdp
 
 apt -y dist-upgrade
 glxinfo | grep "OpenGL version"
