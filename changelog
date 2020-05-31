@@ -1,4 +1,17 @@
-commit fb6a93bbf9e58723ff79f0ea05e908e7df4a99e4 (HEAD -> master, origin/master, origin/HEAD)
+commit bbc332beb3f9acab2105eafded7ca452e3656b3d (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 18:43:38 2020 -0400
+
+    * se elimina docker del script repos
+    * se crea un script para docker
+
+commit 649128c62a2106feecebe66f5cee63bdde000a55
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 17:23:44 2020 -0400
+
+    * changelog
+
+commit fb6a93bbf9e58723ff79f0ea05e908e7df4a99e4
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 31 17:23:31 2020 -0400
 
