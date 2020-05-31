@@ -1,4 +1,16 @@
-commit 1308838d92fc96f16cdb14e5c514bd24e0bee404 (HEAD -> master, origin/master, origin/HEAD)
+commit fb6a93bbf9e58723ff79f0ea05e908e7df4a99e4 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 17:23:31 2020 -0400
+
+    * xrdp
+
+commit f9d0bbfcf504ceb07bef2b65873cad53a42f1fcc
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 16:18:01 2020 -0400
+
+    * changelog
+
+commit 1308838d92fc96f16cdb14e5c514bd24e0bee404
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 31 16:17:43 2020 -0400
 
