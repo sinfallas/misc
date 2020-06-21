@@ -1,4 +1,16 @@
-commit bbc332beb3f9acab2105eafded7ca452e3656b3d (HEAD -> master, origin/master, origin/HEAD)
+commit 591d23186b99dbe794c40975bdddf1f1f3290a75 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jun 21 13:19:48 2020 -0400
+
+    * se agrega script de comprobacion de directorio e IP
+
+commit b8dfd77399bd04d57cb978638a6f5dca1fa0ad37
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun May 31 18:44:09 2020 -0400
+
+    * changelog
+
+commit bbc332beb3f9acab2105eafded7ca452e3656b3d
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun May 31 18:43:38 2020 -0400
 
