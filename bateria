@@ -8,6 +8,9 @@ if [[ "$EUID" != "0" ]]; then
 fi
 
 /usr/bin/cpupower frequency-set -g powersave
+docker stop portainer_agent
+docker stop portainer
+systemctl stop docker
 systemctl stop jellyfin
 systemctl stop avahi-daemon
 systemctl stop accounts-daemon

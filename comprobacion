@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+
+if [[ -z $1 ]]; then
+	echo "No definio ningun directorio"
+	echo "ejemplo: $0 /var/tmp 127.0.0.1"
+	exit 1
+fi
+
+if [[ -z $2 ]]; then
+	echo "No definio ninguna IP"
+	echo "ejemplo: $0 /var/tmp 127.0.0.1"
+	exit 1
+fi
+
+if grep -qs $1 /proc/mounts; then
+	echo "Dispositivo montado correctamente:" $1
+else
+	echo "Dispositivo NO disponible:" $1
+	exit 1
+fi
+
+ping -c 1 $2 > /dev/null
+if [[ $? != 0 ]]; then
+	echo "Host NO disponible:" $2
+	exit 1
+else
+	echo "Host disponible:" $2
+fi
