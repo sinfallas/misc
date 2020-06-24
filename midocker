@@ -15,7 +15,7 @@ apt update -qq
 apt -y install docker-ce docker-ce-cli containerd.io
 
 groupadd docker
-usermod -aG docker sinfallas
+usermod -aG docker $(who | cut -d' ' -f1 | sort | uniq)
 newgrp docker
 systemctl disable docker
 
