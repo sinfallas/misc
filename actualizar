@@ -64,6 +64,7 @@ echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 echo -e "\e[00;1;92mIniciando Actualizacion\e[00m"
 rm -f $lock1
 rm -f $lock2
+snap refresh
 apt -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mLimpiar\e[00m"
