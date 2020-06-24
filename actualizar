@@ -87,8 +87,8 @@ systemctl disable ModemManager.service
 systemctl disable avahi-daemon.service
 systemctl disable speech-dispatcher.service
 systemctl disable pppd-dns.service
-systemctl disable snapd.service
-systemctl disable snapd.seeded.service
+#systemctl disable snapd.service
+#systemctl disable snapd.seeded.service
 systemctl disable unattended-upgrades
 systemctl disable nmbd
 systemctl disable apt-daily
