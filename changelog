@@ -1,4 +1,16 @@
-commit 26015821f423dc4892095d5cefc40be5ff05a350 (HEAD -> master, origin/master, origin/HEAD)
+commit 6312222861bf1d1e4d4696543dc8c3641a5a78bd (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jun 24 13:44:53 2020 -0400
+
+    * snap update
+
+commit 68598fb38a03ca35ae539d7d084a54820a78ecf2
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jun 24 09:50:36 2020 -0400
+
+    * changelog
+
+commit 26015821f423dc4892095d5cefc40be5ff05a350
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Jun 24 09:50:24 2020 -0400
 
