@@ -1,4 +1,16 @@
-commit d40d29c0c8b4f4f04243eb0e0c36e620827b402c (HEAD -> master, origin/master, origin/HEAD)
+commit 468d835d2d253ea4cd6e56455c38b14d7bbc537e (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jun 27 17:42:48 2020 -0400
+
+    * desactiva nuevos servicios
+
+commit 8bf9023014d13a553f1218ca354cc58d8f8b0f50
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jun 27 13:37:56 2020 -0400
+
+    * changelog
+
+commit d40d29c0c8b4f4f04243eb0e0c36e620827b402c
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Jun 27 13:37:38 2020 -0400
 
