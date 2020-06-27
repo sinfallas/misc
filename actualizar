@@ -98,6 +98,9 @@ systemctl disable unattended-upgrades
 systemctl disable nmbd
 systemctl disable apt-daily
 systemctl disable libvirtd
+systemctl disable libvirtd.socket
+systemctl disable containerd
+systemctl disable docker
 systemctl disable clamav-freshclam
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 chown $quien:$quien $gdonde
