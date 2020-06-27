@@ -1,4 +1,16 @@
-commit e5c13bb54c2f74036d81dd04c0273dcfeedca03e (HEAD -> master, origin/master, origin/HEAD)
+commit d40d29c0c8b4f4f04243eb0e0c36e620827b402c (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jun 27 13:37:38 2020 -0400
+
+    * se agrega rkhunter y freshclam
+
+commit 60b82729e3fe0941ca7b3db95394b312d889a8a1
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jun 24 14:05:12 2020 -0400
+
+    * changelog
+
+commit e5c13bb54c2f74036d81dd04c0273dcfeedca03e
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Jun 24 14:04:53 2020 -0400
 
