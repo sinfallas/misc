@@ -55,7 +55,6 @@ if ! [[ -f /usr/sbin/prelink ]] || [[ $(dpkg --get-selections | grep -w "prelink
 fi
 
 if ! [[ -f /usr/bin/apt-fast ]] || [[ $(dpkg --get-selections | grep -w "apt-fast" | awk '{print $1}' | head -1) != apt-fast ]]; then
-	add-apt-repository -y ppa:apt-fast/stable
 	apt -q update
 	apt -qy install apt-fast
 fi
@@ -64,15 +63,21 @@ echo "Iniciando Actualizacion $(date +%d/%m/%Y)" >> $mylog
 echo -e "\e[00;1;92mIniciando Actualizacion\e[00m"
 rm -f $lock1
 rm -f $lock2
+echo -e "\e[00;1;92mActualizando paquetes SNAP\e[00m"
 snap refresh
+echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
 apt -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
+echo -e "\e[00;1;92mActualizando firmas de virus de ClamAV\e[00m"
+freshclam
+echo -e "\e[00;1;92mActualizando firmas de RKHunter\e[00m"
+rkhunter --update
 echo -e "\e[00;1;92mLimpiar\e[00m"
-apt -y autoremove
 apt autoclean
 apt clean
 rm -rf /root/.local/share/Trash/*
 rm -rf /home/*/.local/share/Trash/*
+apt -y autoremove
 echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 echo -e "\e[00;1;92mInitramfs\e[00m"
