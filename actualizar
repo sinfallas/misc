@@ -12,6 +12,7 @@ lock2="/var/lib/apt/lists/lock"
 quien=$(who | cut -d' ' -f1 | sort | uniq)
 gdonde="/home/$quien/.gnupg/gpg.conf"
 echo $BASHPID > /run/"$(basename $0)".pid
+echo "" > $mylog
 exec 2>>$mylog
 
 function clean_1() {
@@ -86,8 +87,8 @@ echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
 echo -e "\e[00;1;92mPrelink\e[00m"
 prelink -amR
-history -c
 echo -e "\e[00;1;92mLimpiando servicios y personalizando\e[00m"
+history -c
 systemctl disable ModemManager.service
 systemctl disable avahi-daemon.service
 systemctl disable speech-dispatcher.service
@@ -104,9 +105,9 @@ systemctl disable docker
 systemctl disable clamav-freshclam
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 chown $quien:$quien $gdonde
-chmod -Rv 700 /home/$quien/.ssh
-chmod -Rv 700 /home/$quien/.bazaar
-chmod -Rv 700 /home/$quien/.gnupg
+chmod -R 700 /home/$quien/.ssh
+chmod -R 700 /home/$quien/.bazaar
+chmod -R 700 /home/$quien/.gnupg
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS segundos" >> $mylog
 echo "Duracion $SECONDS segundos"
