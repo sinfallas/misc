@@ -76,9 +76,14 @@ rkhunter --update
 echo -e "\e[00;1;92mLimpiar\e[00m"
 apt autoclean
 apt clean
+apt -y autoremove
 rm -rf /root/.local/share/Trash/*
 rm -rf /home/*/.local/share/Trash/*
-apt -y autoremove
+history -c
+echo "" > /home/*/.local/share/fish/fish_history
+echo "" > /home/*/.config/fish/fish_history
+echo "" > /root/.local/share/fish/fish_history
+echo "" > /root/.config/fish/fish_history
 echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 echo -e "\e[00;1;92mInitramfs\e[00m"
@@ -87,8 +92,7 @@ echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
 echo -e "\e[00;1;92mPrelink\e[00m"
 prelink -amR
-echo -e "\e[00;1;92mLimpiando servicios y personalizando\e[00m"
-history -c
+echo -e "\e[00;1;92mPersonalizando\e[00m"
 systemctl disable ModemManager.service
 systemctl disable avahi-daemon.service
 systemctl disable speech-dispatcher.service
