@@ -1,4 +1,16 @@
-commit 92b313340a409d4b71041d558832d20586c0388d (HEAD -> master, origin/master, origin/HEAD)
+commit c397e48a24932ca9374806838e632ad7e25eea15 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jul 1 19:31:22 2020 -0400
+
+    * firefox config
+
+commit c1b5be5ab0172e77044499282b26b5f3dfcb0fde
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Jun 30 22:19:33 2020 -0400
+
+    * changelog
+
+commit 92b313340a409d4b71041d558832d20586c0388d
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Jun 30 22:19:19 2020 -0400
 
