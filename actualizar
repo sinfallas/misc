@@ -70,6 +70,9 @@ echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
 apt -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mActualizando firmas de virus de ClamAV\e[00m"
+mkdir -p /var/log/clamav
+touch /var/log/clamav/freshclam.log
+chmod 666 /var/log/clamav/freshclam.log
 freshclam
 echo -e "\e[00;1;92mActualizando firmas de RKHunter\e[00m"
 rkhunter --update
@@ -81,9 +84,9 @@ rm -rf /root/.local/share/Trash/*
 rm -rf /home/*/.local/share/Trash/*
 history -c
 echo "" > /home/*/.local/share/fish/fish_history
-echo "" > /home/*/.config/fish/fish_history
+#echo "" > /home/*/.config/fish/fish_history
 echo "" > /root/.local/share/fish/fish_history
-echo "" > /root/.config/fish/fish_history
+#echo "" > /root/.config/fish/fish_history
 echo -e "\e[00;1;92mDeborphan\e[00m"
 apt -y remove --purge $(deborphan --libdevel) $(deborphan --find-config) $(deborphan)
 echo -e "\e[00;1;92mInitramfs\e[00m"
