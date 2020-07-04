@@ -1,4 +1,16 @@
-commit 7f5337186536178c2854849cf7e00ada6feb80a3 (HEAD -> master, origin/master, origin/HEAD)
+commit 3f203eca1ae437dadb6ccf1d45b42e4bc87c148a (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jul 4 10:10:39 2020 -0400
+
+    * lynis repo
+
+commit 9c6db9068bfd4ab767f1e1006502c2df1c7f3ad4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Jul 3 20:39:43 2020 -0400
+
+    * changelog
+
+commit 7f5337186536178c2854849cf7e00ada6feb80a3
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Jul 3 20:39:21 2020 -0400
 
