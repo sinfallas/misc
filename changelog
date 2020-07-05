@@ -1,4 +1,16 @@
-commit 03bb1ef114e62b8b1f7cf0c137dadbd7ce95e5d1 (HEAD -> master, origin/master, origin/HEAD)
+commit 017d640e3a79a9e177dedd91835efdf051a7f6a9 (HEAD -> master, origin/master, origin/HEAD)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 5 15:14:25 2020 -0400
+
+    * jellyfin
+
+commit 8661d60a6d4e71fa82672d75a055061b96551291
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 5 13:07:22 2020 -0400
+
+    * changelog
+
+commit 03bb1ef114e62b8b1f7cf0c137dadbd7ce95e5d1
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Jul 5 13:07:07 2020 -0400
 
