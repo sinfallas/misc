@@ -6,7 +6,7 @@ if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
 	exit 1
 fi
-
+quien=$(who | cut -d' ' -f1 | sort | uniq)
 #driver video
 add-apt-repository -y ppa:oibaf/graphics-drivers
 add-apt-repository -y ppa:ubuntu-x-swat/updates
@@ -55,6 +55,7 @@ apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chr
 
 usermod -aG video jellyfin
 usermod -aG render jellyfin
+usermod -aG $quien jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
 
