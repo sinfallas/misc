@@ -1,4 +1,16 @@
-commit 017d640e3a79a9e177dedd91835efdf051a7f6a9 (HEAD -> master, origin/master, origin/HEAD)
+commit 235dcf7653cce422d3c9e06d351404dcff502ac5 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Mon Jul 6 22:00:04 2020 -0400
+
+    * snap
+
+commit bc06824ea0b798b689288bc7419de2e4a7e7b22b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 5 15:14:45 2020 -0400
+
+    * changelog
+
+commit 017d640e3a79a9e177dedd91835efdf051a7f6a9
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Jul 5 15:14:25 2020 -0400
 
