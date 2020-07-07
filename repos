@@ -53,6 +53,8 @@ add-apt-repository -y ppa:lutris-team/lutris
 apt update -qq
 apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty bashtop python3-psutil xrdp lynis lutris
 
+snap install authy --beta
+
 usermod -aG video jellyfin
 usermod -aG render jellyfin
 usermod -aG $quien jellyfin
