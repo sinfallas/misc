@@ -11,9 +11,6 @@ lock1="/var/lib/dpkg/lock"
 lock2="/var/lib/apt/lists/lock"
 quien=$(who | cut -d' ' -f1 | sort | uniq)
 gdonde="/home/$quien/.gnupg/gpg.conf"
-echo $BASHPID > /run/"$(basename $0)".pid
-echo "" > $mylog
-exec 2>>$mylog
 
 function clean_1() {
 	rm -f /run/$(basename $0).pid
@@ -26,13 +23,6 @@ function clean_1() {
 	dpkg --configure -a
 }
 
-trap "clean_1; exit" 0 1 2 3 15
-clear
-if [[ "$EUID" != "0" ]]; then
-	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
-	exit 1
-fi
-
 function lock() {
 	echo {LOCKFD}>$LOCKFILE
 	flock -n $LOCKFD
@@ -43,16 +33,21 @@ function exit_error() {
 	exit 1
 }
 
+trap "clean_1; exit" 0 1 2 3 15
+clear
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+	exit 1
+fi
+echo $BASHPID > /run/"$(basename $0)".pid
+echo "" > $mylog
+exec 2>>$mylog
+
 lock || exit_error
 
 if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
 	apt -q update
 	apt -qy install deborphan
-fi
-
-if ! [[ -f /usr/sbin/prelink ]] || [[ $(dpkg --get-selections | grep -w "prelink" | awk '{print $1}' | head -1) != prelink ]]; then
-	apt -q update
-	apt -qy install prelink
 fi
 
 if ! [[ -f /usr/bin/apt-fast ]] || [[ $(dpkg --get-selections | grep -w "apt-fast" | awk '{print $1}' | head -1) != apt-fast ]]; then
@@ -76,7 +71,7 @@ chmod 666 /var/log/clamav/freshclam.log
 freshclam
 echo -e "\e[00;1;92mActualizando firmas de RKHunter\e[00m"
 rkhunter --update
-echo -e "\e[00;1;92mLimpiar\e[00m"
+echo -e "\e[00;1;92mLimpiando\e[00m"
 apt autoclean
 apt clean
 apt -y autoremove
@@ -93,27 +88,47 @@ echo -e "\e[00;1;92mInitramfs\e[00m"
 update-initramfs -k all -u
 echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
-echo -e "\e[00;1;92mPrelink\e[00m"
-prelink -amR
 echo -e "\e[00;1;92mPersonalizando\e[00m"
-systemctl disable ModemManager.service
-systemctl disable avahi-daemon.service
-systemctl disable speech-dispatcher.service
-systemctl disable pppd-dns.service
-#systemctl disable snapd.service
-#systemctl disable snapd.seeded.service
-systemctl disable unattended-upgrades
-systemctl disable nmbd
+if [[ $(dpkg --get-selections | grep -w "ModemManager" | awk '{print $1}' | head -1) = ModemManager ]]; then
+	systemctl disable ModemManager.service
+fi
+if [[ $(dpkg --get-selections | grep -w "avahi-daemon" | awk '{print $1}' | head -1) = avahi-daemon ]]; then
+	systemctl disable avahi-daemon.service
+fi
+if [[ $(dpkg --get-selections | grep -w "speech-dispatcher" | awk '{print $1}' | head -1) = speech-dispatcher ]]; then
+	systemctl disable speech-dispatcher.service
+fi
+if [[ $(dpkg --get-selections | grep -w "unattended-upgrades" | awk '{print $1}' | head -1) = unattended-upgrades ]]; then
+	systemctl disable unattended-upgrades
+fi
+if [[ $(dpkg --get-selections | grep -w "libvirtd" | awk '{print $1}' | head -1) = libvirtd ]]; then
+	systemctl disable libvirtd.socket
+fi
+if [[ $(dpkg --get-selections | grep -w "libvirtd" | awk '{print $1}' | head -1) = libvirtd ]]; then
+	systemctl disable libvirtd
+fi
+if [[ $(dpkg --get-selections | grep -w "docker" | awk '{print $1}' | head -1) = docker ]]; then
+	systemctl disable docker
+fi
+if [[ $(dpkg --get-selections | grep -w "docker" | awk '{print $1}' | head -1) = docker ]]; then
+	systemctl disable containerd
+fi
+if [[ $(dpkg --get-selections | grep -w "clamav-freshclam" | awk '{print $1}' | head -1) = clamav-freshclam ]]; then
+	systemctl disable clamav-freshclam
+fi
+#systemctl disable pppd-dns.service
+#systemctl disable nmbd
 systemctl disable apt-daily
-systemctl disable libvirtd
-systemctl disable libvirtd.socket
-systemctl disable containerd
-systemctl disable docker
-systemctl disable clamav-freshclam
-chown $quien:$quien $gdonde
-chmod -R 700 /home/$quien/.ssh
-chmod -R 700 /home/$quien/.bazaar
-chmod -R 700 /home/$quien/.gnupg
+if [[ $(dpkg --get-selections | grep -w "bzr" | awk '{print $1}' | head -1) = bzr ]]; then
+	chmod -R 700 /home/$quien/.bazaar
+fi
+if [[ $(dpkg --get-selections | grep -w "ssh" | awk '{print $1}' | head -1) = ssh ]]; then
+	chmod -R 700 /home/$quien/.ssh
+fi
+if [[ $(dpkg --get-selections | grep -w "gpg" | awk '{print $1}' | head -1) = gpg ]]; then
+	chown $quien:$quien $gdonde
+	chmod -R 700 /home/$quien/.gnupg
+fi
 echo "Finalizado $(date +%d/%m/%Y)" >> $mylog
 echo "Duracion $SECONDS segundos" >> $mylog
 echo "Duracion $SECONDS segundos"
