@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+echo "$BASHPID" > /run/$(basename $0).pid
+mylog="/var/log/$(basename $0).log"
+echo "" > $mylog
+exec 2>>$mylog
+prelink -amR
+exit 0
