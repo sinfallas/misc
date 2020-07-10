@@ -61,7 +61,7 @@ usermod -aG $quien jellyfin
 systemctl restart jellyfin
 systemctl enable jellyfin
 
-flatpak remote-add --if-not-exists flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 snap install canonical-livepatch
 ln -s /snap/bin/canonical-livepatch /usr/bin/canonical-livepatch
