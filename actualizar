@@ -61,6 +61,8 @@ rm -f $lock1
 rm -f $lock2
 echo -e "\e[00;1;92mActualizando paquetes SNAP\e[00m"
 snap refresh
+echo -e "\e[00;1;92mActualizando paquetes FLATPAK\e[00m"
+flatpak update
 echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
 apt -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
