@@ -1,4 +1,16 @@
-commit 1e4dad7c8ca788c4555fcf985992415fa621414a (HEAD -> master, origin/master, origin/HEAD)
+commit 064e368bc8c2e77c63d9ed88c6a2acf28ba14661 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Fri Jul 10 18:10:59 2020 -0400
+
+    * flatpak
+
+commit 44a5e9a8acd983c67edca2d1188c972391ac6182
+Author: config <Palencia>
+Date:   Fri Jul 10 18:04:24 2020 -0400
+
+    * changelog
+
+commit 1e4dad7c8ca788c4555fcf985992415fa621414a
 Author: config <Palencia>
 Date:   Fri Jul 10 18:04:04 2020 -0400
 
