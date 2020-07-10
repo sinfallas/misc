@@ -53,8 +53,6 @@ add-apt-repository -y ppa:lutris-team/lutris
 apt update -qq
 apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty bashtop python3-psutil xrdp lynis lutris
 
-snap install authy --beta
-
 usermod -aG video jellyfin
 usermod -aG render jellyfin
 usermod -aG $quien jellyfin
@@ -62,7 +60,8 @@ systemctl restart jellyfin
 systemctl enable jellyfin
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
+snap install authy --beta
+snap install electronplayer
 snap install canonical-livepatch
 ln -s /snap/bin/canonical-livepatch /usr/bin/canonical-livepatch
 
