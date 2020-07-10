@@ -1,4 +1,16 @@
-commit 064e368bc8c2e77c63d9ed88c6a2acf28ba14661 (HEAD -> master, origin/master, origin/HEAD)
+commit a3f85c1006c3c4d8bf796ccfa969e87f7a917612 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Fri Jul 10 18:27:33 2020 -0400
+
+    * electronplayer
+
+commit 985438bc9de224214ed894ebc420e3640d31c076
+Author: config <Palencia>
+Date:   Fri Jul 10 18:11:09 2020 -0400
+
+    * changelog
+
+commit 064e368bc8c2e77c63d9ed88c6a2acf28ba14661
 Author: config <Palencia>
 Date:   Fri Jul 10 18:10:59 2020 -0400
 
