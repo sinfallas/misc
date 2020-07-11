@@ -121,9 +121,6 @@ fi
 #systemctl disable pppd-dns.service
 #systemctl disable nmbd
 systemctl disable apt-daily
-if [[ $(dpkg --get-selections | grep -w "bzr" | awk '{print $1}' | head -1) = bzr ]]; then
-	chmod -R 700 /home/$quien/.bazaar
-fi
 if [[ $(dpkg --get-selections | grep -w "ssh" | awk '{print $1}' | head -1) = ssh ]]; then
 	chmod -R 700 /home/$quien/.ssh
 fi
