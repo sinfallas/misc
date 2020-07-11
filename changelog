@@ -1,4 +1,16 @@
-commit a3f85c1006c3c4d8bf796ccfa969e87f7a917612 (HEAD -> master, origin/master, origin/HEAD)
+commit dc94d0c4830db4ab20fbfe4d9ea2b8eb260a2086 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Fri Jul 10 20:42:18 2020 -0400
+
+    * se elimina los relacionado a bazaar
+
+commit 82b19e94a55a53632d907b92480ebfd46c592cf0
+Author: config <Palencia>
+Date:   Fri Jul 10 18:28:34 2020 -0400
+
+    * changelog
+
+commit a3f85c1006c3c4d8bf796ccfa969e87f7a917612
 Author: config <Palencia>
 Date:   Fri Jul 10 18:27:33 2020 -0400
 
