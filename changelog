@@ -1,4 +1,16 @@
-commit fbc7228906ff45f1ed3d9f1e80ef91510b702083 (HEAD -> master, origin/master, origin/HEAD)
+commit fc320107538ccf2f94e0a8f0874107de86834d3c (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Jul 11 21:33:27 2020 -0400
+
+    * mejoras a rlupdate
+
+commit be8519de66f80e9efe7fafdc86d201a17a38668f
+Author: config <Palencia>
+Date:   Sat Jul 11 21:15:03 2020 -0400
+
+    * changelog
+
+commit fbc7228906ff45f1ed3d9f1e80ef91510b702083
 Author: config <Palencia>
 Date:   Sat Jul 11 21:14:47 2020 -0400
 
