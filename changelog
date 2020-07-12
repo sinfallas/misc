@@ -1,4 +1,16 @@
-commit dc94d0c4830db4ab20fbfe4d9ea2b8eb260a2086 (HEAD -> master, origin/master, origin/HEAD)
+commit fbc7228906ff45f1ed3d9f1e80ef91510b702083 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Jul 11 21:14:47 2020 -0400
+
+    * se elimina jellyfin
+
+commit 4665c973757dc9e388fa170c21c4bd093a5e9c73
+Author: config <Palencia>
+Date:   Fri Jul 10 20:42:37 2020 -0400
+
+    * changelog
+
+commit dc94d0c4830db4ab20fbfe4d9ea2b8eb260a2086
 Author: config <Palencia>
 Date:   Fri Jul 10 20:42:18 2020 -0400
 
