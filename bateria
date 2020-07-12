@@ -11,7 +11,6 @@ fi
 docker stop portainer_agent
 docker stop portainer
 systemctl stop docker
-systemctl stop jellyfin
 systemctl stop avahi-daemon
 systemctl stop accounts-daemon
 systemctl stop cups
