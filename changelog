@@ -1,4 +1,16 @@
-commit fc320107538ccf2f94e0a8f0874107de86834d3c (HEAD -> master, origin/master, origin/HEAD)
+commit 03d2c70b37152764562e8fb5fe03120764e94851 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Tue Aug 4 20:17:43 2020 -0400
+
+    * log2ram
+
+commit 8d8fbc0617fde41e4d2261e7cad79633dab74d15
+Author: config <Palencia>
+Date:   Sat Jul 11 21:33:40 2020 -0400
+
+    * changelog
+
+commit fc320107538ccf2f94e0a8f0874107de86834d3c
 Author: config <Palencia>
 Date:   Sat Jul 11 21:33:27 2020 -0400
 
