@@ -1,4 +1,16 @@
-commit bce2f35e2993606ef6af5af6dd0cd29d0684be41 (HEAD -> master, origin/master, origin/HEAD)
+commit ab9207f566a6c43bf1afe8121971f58726ca2307 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Wed Sep 2 15:53:50 2020 -0400
+
+    * bugfix
+
+commit 377c136329320ac28eb4ed035a4ed7fb5c6fb32e
+Author: config <Palencia>
+Date:   Sat Aug 22 20:36:49 2020 -0400
+
+    * changelog
+
+commit bce2f35e2993606ef6af5af6dd0cd29d0684be41
 Author: config <Palencia>
 Date:   Sat Aug 22 20:36:38 2020 -0400
 
