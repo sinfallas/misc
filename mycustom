@@ -31,7 +31,7 @@ gsettings set org.gnome.nautilus.preferences confirm-trash false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.system.location enabled false
-gsettings set org.gnome.SessionManager logout-prompt false
+gsettings set org.gnome.SessionManager logout-prompt true
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
