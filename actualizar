@@ -64,7 +64,7 @@ snap refresh
 echo -e "\e[00;1;92mActualizando paquetes FLATPAK\e[00m"
 flatpak update
 echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
-apt -q update
+apt-fast -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mActualizando firmas de virus de ClamAV\e[00m"
 mkdir -p /var/log/clamav
