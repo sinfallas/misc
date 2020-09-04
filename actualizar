@@ -67,6 +67,7 @@ echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
 apt-fast -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mActualizando firmas de virus de ClamAV\e[00m"
+killall -q freshclam
 mkdir -p /var/log/clamav
 touch /var/log/clamav/freshclam.log
 chmod 666 /var/log/clamav/freshclam.log
@@ -74,7 +75,7 @@ freshclam
 echo -e "\e[00;1;92mActualizando firmas de RKHunter\e[00m"
 rkhunter --update
 echo -e "\e[00;1;92mLimpiando\e[00m"
-apt autoclean
+apt-fast clean
 apt clean
 apt -y autoremove
 rm -rf /root/.local/share/Trash/*
