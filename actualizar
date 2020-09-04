@@ -13,14 +13,14 @@ quien=$(who | cut -d' ' -f1 | sort | uniq)
 gdonde="/home/$quien/.gnupg/gpg.conf"
 
 function clean_1() {
+	dpkg --configure -a
 	rm -f /run/$(basename $0).pid
 	rm -f $LOCKFILE
-	killall -q apt dpkg
 	rm -f $lock1
 	rm -f $lock2
 	rm -rf /tmp/*
 	rm -rf /var/tmp/*
-	dpkg --configure -a
+	killall -q apt dpkg freshclam
 }
 
 function lock() {
@@ -67,7 +67,6 @@ echo -e "\e[00;1;92mActualizando paquetes DEB\e[00m"
 apt-fast -q update
 apt-fast -y --allow-unauthenticated dist-upgrade
 echo -e "\e[00;1;92mActualizando firmas de virus de ClamAV\e[00m"
-killall -q freshclam
 mkdir -p /var/log/clamav
 touch /var/log/clamav/freshclam.log
 chmod 666 /var/log/clamav/freshclam.log
