@@ -41,5 +41,8 @@ gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 gsettings set org.gnome.desktop.notifications.application.update-manager enable false
 gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gtk.settings.file-chooser clock-format '12h'
+gsettings set org.gnome.nautilus.preferences show-delete-permanently true
+gsettings set org.gnome.software download-updates false
+gsettings set org.gnome.desktop.remote-access lock-screen-on-disconnect true
 #gsettings set org.gnome.shell disabled-extensions ['desktop-icons@csoriano']
 exit 0

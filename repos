@@ -56,8 +56,14 @@ add-apt-repository -y ppa:mmstick76/alacritty
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C80E383C3DE9F082E01391A0366C67DE91CA5D5F
 echo "deb https://packages.cisofy.com/community/lynis/deb/ stable main" | tee /etc/apt/sources.list.d/cisofy-lynis.list
 
+#libreoffice 7
+add-apt-repository -y ppa:libreoffice/libreoffice-7-0
+
 #lutris
 add-apt-repository -y ppa:lutris-team/lutris
+
+#qemu 5.1
+add-apt-repository -y ppa:jacob/virtualisation
 
 apt update -qq
 apt -y install linux-generic-hwe-20.04 anydesk apt-fast brave-browser google-chrome-stable jellyfin alacritty bashtop python3-psutil xrdp lynis lutris
