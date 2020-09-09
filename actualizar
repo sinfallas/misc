@@ -121,7 +121,13 @@ if [[ $(dpkg --get-selections | grep -w "clamav-freshclam" | awk '{print $1}' | 
 fi
 #systemctl disable pppd-dns.service
 #systemctl disable nmbd
-systemctl disable apt-daily
+systemctl disable apt-daily-upgrade.service
+systemctl disable apt-daily.service
+systemctl disable brltty-udev.service
+systemctl disable brltty.service
+systemctl disable geoclue.service
+systemctl disable motd-news.service
+systemctl disable wacom-inputattach@.service
 if [[ $(dpkg --get-selections | grep -w "ssh" | awk '{print $1}' | head -1) = ssh ]]; then
 	chmod -R 700 /home/$quien/.ssh
 fi
