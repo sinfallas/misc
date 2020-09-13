@@ -1,4 +1,16 @@
-commit 360037869558d414e4b551483bc49fc1667c92dc (HEAD -> master, origin/master, origin/HEAD)
+commit 37341f4be8332c54d04a9a81f389cd973884d2b0 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Sep 13 15:44:54 2020 -0400
+
+    * mywol update
+
+commit 00a62ab06b732870aaac4182a564d26d7eb1342e
+Author: config <Palencia>
+Date:   Tue Sep 8 20:29:15 2020 -0400
+
+    * changelog
+
+commit 360037869558d414e4b551483bc49fc1667c92dc
 Author: config <Palencia>
 Date:   Tue Sep 8 20:28:19 2020 -0400
 
