@@ -91,6 +91,9 @@ echo -e "\e[00;1;92mInitramfs\e[00m"
 update-initramfs -k all -u
 echo -e "\e[00;1;92mGrub\e[00m"
 update-grub2
+echo -e "\e[00;1;92mRegenerando Caches\e[00m"
+fc-cache -fr
+update-apt-xapian-index -q
 echo -e "\e[00;1;92mPersonalizando\e[00m"
 if [[ $(dpkg --get-selections | grep -w "ModemManager" | awk '{print $1}' | head -1) = ModemManager ]]; then
 	systemctl disable ModemManager.service
