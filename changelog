@@ -1,4 +1,16 @@
-commit c9a95a864b5f0c28f9216766ad73d39b3e8f4684 (HEAD -> master, origin/master, origin/HEAD)
+commit d1a98e081418a259ae4d644189b4e9ecd3c683f3 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Tue Sep 15 12:08:38 2020 -0400
+
+    * se regeneran algunos cache en tiempo de ejecucion
+
+commit 923b3fabde5e55cd1c4d1d07b66940f2090b995f
+Author: config <Palencia>
+Date:   Tue Sep 15 11:07:32 2020 -0400
+
+    * changelog
+
+commit c9a95a864b5f0c28f9216766ad73d39b3e8f4684
 Author: config <Palencia>
 Date:   Tue Sep 15 11:07:14 2020 -0400
 
