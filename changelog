@@ -1,4 +1,16 @@
-commit 43e2901439b7fc39d005011c2a4e0cb049db848b (HEAD -> master, origin/master, origin/HEAD)
+commit da11257e63723bfdad9f30e4bd737d3739d2094a (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Thu Sep 17 13:01:18 2020 -0400
+
+    * se elimina xrdp
+
+commit 5dcf90bcc09f2857c61e79ea22bf7a125d59a087
+Author: config <Palencia>
+Date:   Thu Sep 17 09:56:05 2020 -0400
+
+    * changelog
+
+commit 43e2901439b7fc39d005011c2a4e0cb049db848b
 Author: config <Palencia>
 Date:   Thu Sep 17 09:55:31 2020 -0400
 
