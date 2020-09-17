@@ -1,4 +1,16 @@
-commit d1a98e081418a259ae4d644189b4e9ecd3c683f3 (HEAD -> master, origin/master, origin/HEAD)
+commit 43e2901439b7fc39d005011c2a4e0cb049db848b (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Thu Sep 17 09:55:31 2020 -0400
+
+    * mycustom se utiliza otra herramientas para algunas configuracion que fallaban
+
+commit 1c2ed1615448bdebdc1e477769ba64adcb9d6c46
+Author: config <Palencia>
+Date:   Tue Sep 15 12:08:58 2020 -0400
+
+    * changelog
+
+commit d1a98e081418a259ae4d644189b4e9ecd3c683f3
 Author: config <Palencia>
 Date:   Tue Sep 15 12:08:38 2020 -0400
 
