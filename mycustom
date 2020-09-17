@@ -26,10 +26,13 @@ gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
-gsettings set org.gnome.desktop.remote-access require-encryption false
+gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.nautilus.preferences confirm-trash false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
+gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.1
 gsettings set org.gnome.system.location enabled false
 gsettings set org.gnome.SessionManager logout-prompt true
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
@@ -37,12 +40,11 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set com.ubuntu.touch.network gps false
-gsettings set org.gnome.desktop.notifications show-in-lock-screen false
-gsettings set org.gnome.desktop.notifications.application.update-manager enable false
-gsettings set org.gnome.desktop.interface clock-format '12h'
-gsettings set org.gtk.settings.file-chooser clock-format '12h'
 gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 gsettings set org.gnome.software download-updates false
-gsettings set org.gnome.desktop.remote-access lock-screen-on-disconnect true
+dconf write /org/gnome/desktop/remote-access/require-encryption false
+dconf write /org/gnome/desktop/remote-access/lock-screen-on-disconnect true
+dconf write /org/gnome/desktop/notifications/application/update-manager/enable false
+dconf write /org/gtk/settings/file-chooser/clock-format "'12h'"
 #gsettings set org.gnome.shell disabled-extensions ['desktop-icons@csoriano']
 exit 0
