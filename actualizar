@@ -45,6 +45,8 @@ exec 2>>$mylog
 
 lock || exit_error
 
+sync; echo 3  > /proc/sys/vm/drop_caches
+
 if ! [[ -f /usr/bin/deborphan ]] || [[ $(dpkg --get-selections | grep -w "deborphan" | awk '{print $1}' | head -1) != deborphan ]]; then
 	apt -q update
 	apt -qy install deborphan
