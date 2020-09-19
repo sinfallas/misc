@@ -1,4 +1,16 @@
-commit da11257e63723bfdad9f30e4bd737d3739d2094a (HEAD -> master, origin/master, origin/HEAD)
+commit a0bc442de104a48cfcf93577b1615e554d9a6359 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Sep 19 15:21:50 2020 -0400
+
+    * limpieza de cache
+
+commit e0a61158dfe4f429f807a8d9a9175977b6305329
+Author: config <Palencia>
+Date:   Thu Sep 17 13:01:30 2020 -0400
+
+    * changelog
+
+commit da11257e63723bfdad9f30e4bd737d3739d2094a
 Author: config <Palencia>
 Date:   Thu Sep 17 13:01:18 2020 -0400
 
