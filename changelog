@@ -1,4 +1,16 @@
-commit a0bc442de104a48cfcf93577b1615e554d9a6359 (HEAD -> master, origin/master, origin/HEAD)
+commit 79af48e3216c7f889c24c05ed325a1f46c60b3d4 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Sep 26 12:04:26 2020 -0400
+
+    * se traslada actualizar a su propio repo
+
+commit c21605909271a063ff1cd59673b59f9e0cf8f0b8
+Author: config <Palencia>
+Date:   Sat Sep 19 15:22:05 2020 -0400
+
+    * changelog
+
+commit a0bc442de104a48cfcf93577b1615e554d9a6359
 Author: config <Palencia>
 Date:   Sat Sep 19 15:21:50 2020 -0400
 
