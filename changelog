@@ -1,4 +1,16 @@
-commit 79af48e3216c7f889c24c05ed325a1f46c60b3d4 (HEAD -> master, origin/master, origin/HEAD)
+commit c67d0c6ffbe9bd2f5a207673d0f7759e00ccb3f4 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Sep 26 12:18:38 2020 -0400
+
+    * se traslada mywol a su propio repositorio
+
+commit 6016b7a125f4c2829c2688a67033ba60bdd2d759
+Author: config <Palencia>
+Date:   Sat Sep 26 12:04:43 2020 -0400
+
+    * changelog
+
+commit 79af48e3216c7f889c24c05ed325a1f46c60b3d4
 Author: config <Palencia>
 Date:   Sat Sep 26 12:04:26 2020 -0400
 
