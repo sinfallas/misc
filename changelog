@@ -1,4 +1,16 @@
-commit 70c7fd53e9c82d18eec60900ab296dc647473da4 (HEAD -> master, origin/master, origin/HEAD)
+commit a76354adedfa42b0b7c7e1ee104ea141125b876c (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sat Oct 3 23:06:22 2020 -0400
+
+    * se eliminan lineas y se hacen comentarios
+
+commit 3d45f4e551ecf0b7de035e3df329b8230ee13912
+Author: config <Palencia>
+Date:   Sat Sep 26 12:32:38 2020 -0400
+
+    * changelog
+
+commit 70c7fd53e9c82d18eec60900ab296dc647473da4
 Author: config <Palencia>
 Date:   Sat Sep 26 12:32:11 2020 -0400
 
