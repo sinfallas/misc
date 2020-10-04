@@ -13,19 +13,15 @@
 # Description:       mizram
 ### END INIT INFO
 
-CPUS=$(nproc)
+#CPUS=$(nproc)
 
 case "$1" in
   start)
 	/usr/bin/cpupower frequency-set -g performance
-	modprobe zram num_devices=1
+	modprobe zram num_devices=2
 	zramctl -f -t 2 -s 100MB -a lz4
 	mkswap /dev/zram0
 	swapon --priority 10 /dev/zram0
-	killall evolution-addressbook-factory
-	killall gsd-smartcard
-	killall gsd-wacom
-	killall Thunar
 	;;
   stop)
 	swapoff /dev/zram0
