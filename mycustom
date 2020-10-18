@@ -6,9 +6,9 @@ if [[ "$EUID" = "0" ]]; then
 	echo "ERROR: No debe ser root."
 	exit 1
 fi
-
 gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
 gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+gsettings set org.gnome.desktop.background show-desktop-icons false
 gsettings set org.gnome.desktop.search-providers disable-external true
 gsettings set org.gnome.desktop.sound event-sounds false
 gsettings set org.gnome.desktop.interface show-battery-percentage true
@@ -18,14 +18,20 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.media-handling autorun-never true
 gsettings set org.gnome.desktop.privacy remember-app-usage false
 gsettings set org.gnome.desktop.privacy remember-recent-files false
+gsettings set org.gnome.desktop.privacy old-files-age "7"
 gsettings set org.gnome.desktop.privacy remove-old-temp-files true
 gsettings set org.gnome.desktop.privacy remove-old-trash-files true
 gsettings set org.gnome.desktop.privacy report-technical-problems false
 gsettings set org.gnome.desktop.privacy send-software-usage-stats false
+gsettings set org.gnome.desktop.privacy hide-identity true
+gsettings set org.gnome.desktop.privacy recent-files-max-age "0"
+gsettings set org.gnome.desktop.wm.preferences disable-workarounds true
+gsettings set org.gnome.desktop.thumbnailers disable-all true
 gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
 gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 gsettings set org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+gsettings set org.gnome.desktop.peripherals.mouse middle-click-emulation true
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.nautilus.preferences confirm-trash false
@@ -44,7 +50,10 @@ gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 gsettings set org.gnome.software download-updates false
 dconf write /org/gnome/desktop/remote-access/require-encryption false
 dconf write /org/gnome/desktop/remote-access/lock-screen-on-disconnect true
+dconf write /org/gnome/desktop/remote-access/disable-background true
 dconf write /org/gnome/desktop/notifications/application/update-manager/enable false
 dconf write /org/gtk/settings/file-chooser/clock-format "'12h'"
-#gsettings set org.gnome.shell disabled-extensions ['desktop-icons@csoriano']
+dconf write /org/freedesktop/tracker/miner/files/index-recursive-directories "['']"
+dconf write /org/freedesktop/tracker/miner/files/index-on-battery-first-time false
+dconf write /org/freedesktop/tracker/miner/files/index-on-battery false
 exit 0
