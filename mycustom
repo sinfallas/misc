@@ -8,6 +8,8 @@ if [[ "$EUID" = "0" ]]; then
 fi
 gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
 gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+gsettings set org.freedesktop.Tracker.Miner.Files index-on-battery false
+gsettings set org.freedesktop.Tracker.Miner.Files index-on-battery-first-time false
 gsettings set org.gnome.desktop.background show-desktop-icons false
 gsettings set org.gnome.desktop.search-providers disable-external true
 gsettings set org.gnome.desktop.sound event-sounds false
@@ -35,6 +37,7 @@ gsettings set org.gnome.desktop.peripherals.mouse middle-click-emulation true
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.nautilus.preferences confirm-trash false
+gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode 'FIXED'
@@ -44,10 +47,16 @@ gsettings set org.gnome.SessionManager logout-prompt true
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+gsettings set org.gnome.settings-daemon.plugins.a11y-keyboard active false
+gsettings set org.gnome.settings-daemon.plugins.a11y-settings active false
+gsettings set org.gnome.settings-daemon.plugins.gsdwacom active false
+gsettings set org.gnome.settings-daemon.plugins.smartcard active false
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set com.ubuntu.touch.network gps false
-gsettings set org.gnome.nautilus.preferences show-delete-permanently true
 gsettings set org.gnome.software download-updates false
+gsettings set org.gnome.gnome-flashback screencast false
+dconf write /apps/seahorse/server-auto-publish true
+dconf write /apps/seahorse/server-auto-retrieve true
 dconf write /org/gnome/desktop/remote-access/require-encryption false
 dconf write /org/gnome/desktop/remote-access/lock-screen-on-disconnect true
 dconf write /org/gnome/desktop/remote-access/disable-background true
