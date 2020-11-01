@@ -7,8 +7,6 @@ if [[ "$EUID" != "0" ]]; then
 	exit 1
 fi
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
-
 apt update -qq
 apt -y install docker-ce docker-ce-cli containerd.io
 
