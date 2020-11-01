@@ -1,4 +1,22 @@
-commit 2f1d5859a3cf9d5caa5349b444096fcbed51d2ff (HEAD -> master, origin/master, origin/HEAD)
+commit 35443d80bf9eb06aaecd2b710b36ed2bc97c71e6 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Nov 1 15:46:21 2020 -0400
+
+    * se agrega el script xiaomiclean
+
+commit 1f6a923506ac113e086379f6171f2db2964526fd
+Author: config <Palencia>
+Date:   Sun Nov 1 11:36:07 2020 -0400
+
+    * bugfix
+
+commit 77dcee22e90eedc950dbc6dd96e074e1b56ea039
+Author: config <Palencia>
+Date:   Sun Nov 1 11:35:46 2020 -0400
+
+    * changelog
+
+commit 2f1d5859a3cf9d5caa5349b444096fcbed51d2ff
 Author: config <Palencia>
 Date:   Sun Nov 1 11:35:04 2020 -0400
 
