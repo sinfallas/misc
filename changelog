@@ -1,4 +1,16 @@
-commit 24011412655e0b7d462462ec2db2ccb88a464fee (HEAD -> master, origin/master, origin/HEAD)
+commit 2f1d5859a3cf9d5caa5349b444096fcbed51d2ff (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Nov 1 11:35:04 2020 -0400
+
+    * se elimina al importacion de la llave
+
+commit 3b907fa76f27d42a0bd192a083cee5df8a9eb4c9
+Author: config <Palencia>
+Date:   Sun Oct 18 09:32:09 2020 -0400
+
+    * changelog
+
+commit 24011412655e0b7d462462ec2db2ccb88a464fee
 Author: config <Palencia>
 Date:   Sun Oct 18 09:31:54 2020 -0400
 
