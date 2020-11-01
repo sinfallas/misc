@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+coman="adb shell pm uninstall --user 0"
+
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+	exit 1
+fi
+
+case "$1" in
+	basico)
+		$coman com.android.bookmarkprovider
+		$coman com.android.browser
+		$coman com.mipay.wallet.id
+		$coman com.mipay.wallet.in
+		$coman com.miui.analytics
+		$coman com.miui.hybrid
+		$coman com.miui.hybrid.accessory
+		$coman com.miui.msa.global
+		$coman com.miui.nextpay
+		$coman com.miui.yellowpage
+		$coman com.xiaomi.glgm
+		$coman com.xiaomi.joyose
+		$coman com.xiaomi.payment
+		;;
+		
+	basico)
+		$coman $2	
+		;;	
+
+	*)
+		echo "uso: $(basename $0) {basico|app <nombre>}"
+		;;
+
+esac
+exit 0
