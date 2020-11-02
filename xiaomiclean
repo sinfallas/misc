@@ -23,6 +23,14 @@ case "$1" in
 		$coman com.xiaomi.glgm
 		$coman com.xiaomi.joyose
 		$coman com.xiaomi.payment
+		$coman com.android.calendar
+		$coman com.micredit.in
+		$coman com.miui.videoplayer
+		$coman com.miui.notes
+		$coman com.mi.globalbrowser
+		$coman com.facebook.services
+		$coman com.facebook.system
+		$coman com.facebook.appmanager		
 		;;
 		
 	basico)
