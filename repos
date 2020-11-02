@@ -45,10 +45,6 @@ add-apt-repository -y ppa:webupd8team/haguichi
 echo "deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main" | tee /etc/apt/sources.list.d/jellyfin.list
 wget -O - https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | apt-key add -
 
-#bashtop
-echo "deb http://packages.azlux.fr/debian/ buster main" | tee /etc/apt/sources.list.d/azlux.list
-wget -qO - https://azlux.fr/repo.gpg.key | apt-key add -
-
 #alacritty
 add-apt-repository -y ppa:mmstick76/alacritty
 
