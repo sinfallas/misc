@@ -1,4 +1,16 @@
-commit b85e017da7fd2e070add0f57cc227fc775e57644 (HEAD -> master, origin/master, origin/HEAD)
+commit cfccb87154c167584ec39c5f66b502d6c6509499 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Mon Nov 2 17:34:19 2020 -0400
+
+    * se agregan mas nombres de APK innecesarios
+
+commit dccd314a152e9d4c8485af0b5f008e91050d6c6b
+Author: config <Palencia>
+Date:   Sun Nov 1 22:11:41 2020 -0400
+
+    * changelog
+
+commit b85e017da7fd2e070add0f57cc227fc775e57644
 Author: config <Palencia>
 Date:   Sun Nov 1 22:11:30 2020 -0400
 
