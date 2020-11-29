@@ -33,7 +33,7 @@ case "$1" in
 		$coman com.facebook.appmanager		
 		;;
 		
-	basico)
+	app)
 		$coman $2	
 		;;	
 
