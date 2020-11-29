@@ -1,4 +1,16 @@
-commit 205055a907b247c356186b0553fa88c274f2c2dd (HEAD -> master, origin/master, origin/HEAD)
+commit cfab207ff8a81f0e1ee77ef4bbb7fc31835406a1 (HEAD -> master, origin/master, origin/HEAD)
+Author: config <Palencia>
+Date:   Sun Nov 29 17:56:14 2020 -0400
+
+    * mas bloatware
+
+commit 19ae7a534b704526b6fb9606afb55404e375bcea
+Author: config <Palencia>
+Date:   Sun Nov 29 17:17:57 2020 -0400
+
+    * changelog
+
+commit 205055a907b247c356186b0553fa88c274f2c2dd
 Author: config <Palencia>
 Date:   Sun Nov 29 17:17:44 2020 -0400
 
