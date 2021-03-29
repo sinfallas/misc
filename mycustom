@@ -54,6 +54,7 @@ gsettings set org.gnome.settings-daemon.plugins.smartcard active false
 gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
 gsettings set com.ubuntu.touch.network gps false
 gsettings set org.gnome.software download-updates false
+gsettings set org.gnome.software allow-updates false
 gsettings set org.gnome.gnome-flashback screencast false
 dconf write /apps/seahorse/server-auto-publish true
 dconf write /apps/seahorse/server-auto-retrieve true

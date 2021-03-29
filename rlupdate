@@ -26,7 +26,7 @@ else
 		mv -f /home/$mi/Descargas/RuneLite.AppImage /usr/bin/
 	fi
 fi
-chmod +x /usr/bin/RuneLite.AppImage
+chmod 777 /usr/bin/RuneLite.AppImage
 printf '[Desktop Entry]\nEncoding=UTF-8\nType=Application\nIcon=/usr/share/icons/runelite.png\nExec=/usr/bin/RuneLite.AppImage --mode=OFF\nName=RuneLite\nComment=RuneLite launcher' > /usr/share/applications/runelite.desktop
 chmod 644 /usr/share/applications/runelite.desktop
 echo "Finalizado."
