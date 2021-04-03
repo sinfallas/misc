@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
-
+LC_ALL=C
 if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
 	exit 1
 fi
-
 /usr/bin/cpupower frequency-set -g powersave
 docker stop portainer_agent
 docker stop portainer
@@ -32,6 +31,5 @@ killall gsd-smartcard
 killall gsd-wacom
 killall Thunar
 clear
-#acpi -Vs
 upower -i /org/freedesktop/UPower/devices/battery_BAT0
 exit 0

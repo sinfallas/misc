@@ -6,7 +6,7 @@ LC_ALL=C
 mi=$(who | uniq | awk '{print $1}')
 clear
 if [[ "$EUID" != "0" ]]; then
-	echo "ERROR: Debes ser root."
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
 	exit 1
 fi
 if [[ -d /home/$mi/Downloads ]]; then
