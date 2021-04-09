@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+nombres=(libvirt-guests.service libvirtd.service virtlockd.service virtlogd.service libvirtd-admin.socket libvirtd-ro.socket libvirtd.socket  virtlockd-admin.socket virtlockd.socket virtlogd-admin.socket virtlogd.socket virt-guest-shutdown.target)
+
+if [[ "$EUID" != "0" ]]; then
+	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+	exit 1
+fi
+
+case "$1" in
+	on)
+		for i in ${nombres[@]}; do
+			systemctl unmask $i
+		done
+	;;
+
+	off)
+		for i in ${nombres[@]}; do
+			systemctl mask $i
+		done
+	;;
+
+	*)
+		echo "uso: $(basename $0) {on|off}"
+	;;
+
+esac
+exit 0
