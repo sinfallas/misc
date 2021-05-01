@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+LOCKFILE="/tmp/$(basename $0)_$(whoami)"
+LOCKFD="150"
+fecha=$(date)
+mylog="/var/log/$(basename "$0").log"
+archivo="/root/miups.txt"
+comando='swaks -4 --to destino@correo.com --from origen@correo.com --server smtp.servidor.com:587 -tls --auth LOGIN --auth-user USUARIO --auth-password CLAVE'
+
+function lock() {
+	echo {LOCKFD}>$LOCKFILE
+	flock -n $LOCKFD
+}
+
+function exit_error() {
+	echo "ERROR: Ya hay una instancia en ejecución. Saliendo"
+	exit 1
+}
+
+# colocar esto en crontab */1 * * * * /usr/bin/miups
+
+if [[ "$EUID" != "0" ]]; then
+	echo "ERROR: Debe ser root."
+	exit 1
+fi
+
+lock || exit_error
+
+if ! [[ -f /usr/bin/swaks ]]; then
+	echo "Este script necesita el paquete SWAKS."
+	exit 1
+fi
+
+if [[ $(upower -i /org/freedesktop/UPower/devices/ups_hiddev0 | grep -E "state" | awk '{print $2}') = discharging ]]; then
+	if [[ -f $archivo ]]; then
+		exit 1
+	fi
+	$comando --header "Subject: Interrupcion de Servicio electrico %DATE%" --body "Se interrumpio el servicio electrico en fecha: $fecha enviado desde $(hostname)"
+	if [[ $? = 0 ]]; then
+		echo $fecha > $archivo
+	else
+		echo "Interrupcion del servicio electrico en fecha $fecha pero NO se pudo enviar el correo de notificacion." >> $mylog
+	fi
+else
+	if [[ -f $archivo ]]; then
+		rm -f $archivo
+		$comando --header "Subject: Servicio electrico restablecido %DATE%" --body "Se restablecio el servicio electrico en fecha: $fecha enviado desde $(hostname)"
+	fi
+fi
+
+exit 0
