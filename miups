@@ -9,6 +9,14 @@ mylog="/var/log/$(basename "$0").log"
 archivo="/root/miups.txt"
 comando='swaks -4 --to destino@correo.com --from origen@correo.com --server smtp.servidor.com:587 -tls --auth LOGIN --auth-user USUARIO --auth-password CLAVE'
 
+function errores() {
+	if [[ $? = 0 ]]; then
+		echo "" > /dev/null
+	else
+		echo "NO se pudo enviar el correo de notificacion en fecha: $fecha" >> $mylog
+	fi
+}
+
 function lock() {
 	echo {LOCKFD}>$LOCKFILE
 	flock -n $LOCKFD
@@ -39,14 +47,22 @@ if [[ $(upower -i /org/freedesktop/UPower/devices/ups_hiddev0 | grep -E "state" 
 	fi
 	$comando --header "Subject: Interrupcion de Servicio electrico %DATE%" --body "Se interrumpio el servicio electrico en fecha: $fecha enviado desde $(hostname)"
 	if [[ $? = 0 ]]; then
-		echo $fecha > $archivo
+		echo "0" > $archivo
 	else
 		echo "Interrupcion del servicio electrico en fecha $fecha pero NO se pudo enviar el correo de notificacion." >> $mylog
+		echo "1" > $archivo
 	fi
 else
 	if [[ -f $archivo ]]; then
-		rm -f $archivo
-		$comando --header "Subject: Servicio electrico restablecido %DATE%" --body "Se restablecio el servicio electrico en fecha: $fecha enviado desde $(hostname)"
+		if [[ $(cat $archivo) = 0 ]]; then
+			rm -f $archivo
+			$comando --header "Subject: Servicio electrico restablecido %DATE%" --body "Se restablecio el servicio electrico en fecha: $fecha enviado desde $(hostname)"
+			errores
+		else
+			rm -f $archivo
+			$comando --header "Subject: Servicio electrico restablecido %DATE%" --body "Se restablecio el servicio electrico en fecha: $fecha pero NO pudo enviarse la notificacion de la interrupcion, enviado desde $(hostname)"
+			errores
+		fi
 	fi
 fi
 
