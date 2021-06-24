@@ -1,33 +1,30 @@
 #!/usr/bin/env bash
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
-set -euo pipefail
 LC_ALL=C
-mi=$(who | uniq | awk '{print $1}')
+source /usr/bin/mivariable
+siroot
 clear
-if [[ "$EUID" != "0" ]]; then
-	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
+
+if [[ -z $1 ]]; then
+	echo "ERROR: Debe indicar la version a descargar"
 	exit 1
 fi
-if [[ -d /home/$mi/Downloads ]]; then
-	if ! [[ -f /home/$mi/Downloads/RuneLite.AppImage ]]; then
-		echo "No existe el fichero de actualizacion."
-		exit 1
-	else
-		rm -f /usr/bin/RuneLite.AppImage
-		mv -f /home/$mi/Downloads/RuneLite.AppImage /usr/bin/
-	fi
-else
-	if ! [[ -f /home/$mi/Descargas/RuneLite.AppImage ]]; then
-		echo "No existe el fichero de actualizacion."
-		exit 1
-	else
-		rm -f /usr/bin/RuneLite.AppImage
-		mv -f /home/$mi/Descargas/RuneLite.AppImage /usr/bin/
-	fi
-fi
+
+rm -f /usr/bin/RuneLite.AppImage
+echo "Descargado RuneLite.AppImage"
+wget -O /tmp/RuneLite.AppImage https://github.com/runelite/launcher/releases/download/$1/RuneLite.AppImage
+mv -f /tmp/RuneLite.AppImage /usr/bin/
 chmod 777 /usr/bin/RuneLite.AppImage
-printf '[Desktop Entry]\nEncoding=UTF-8\nType=Application\nIcon=/usr/share/icons/runelite.png\nExec=/usr/bin/RuneLite.AppImage --mode=OFF\nName=RuneLite\nComment=RuneLite launcher' > /usr/share/applications/runelite.desktop
+clear
+
+echo "Descargado runelite.png"
+wget -O /tmp/runelite.png https://raw.githubusercontent.com/runelite/launcher/master/appimage/runelite.png
+mv -f /tmp/runelite.png /usr/share/icons/runelite.png
+chmod 644 /usr/share/icons/runelite.png
+
+printf '[Desktop Entry]\nEncoding=UTF-8\nType=Application\nIcon=/usr/share/icons/runelite.png\nExec=/usr/bin/RuneLite.AppImage\nName=RuneLite\nTerminal=false\nComment=An opensource third party client for Old School RuneScape\nCategories=Games;' > /usr/share/applications/runelite.desktop
 chmod 644 /usr/share/applications/runelite.desktop
+clear
 echo "Finalizado."
 exit 0
