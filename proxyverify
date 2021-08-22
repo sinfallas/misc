@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+m1="/tmp/1.txt"
+m2="/tmp/2.txt"
+m3="/tmp/3.txt"
+url="https://github.com"
+url2="https://www.google.com"
+
+function clean_1() {
+	rm -f "$m1"
+	rm -f "$m2"
+	rm -f "$m3"
+	export http_proxy=
+	export HTTP_PROXY=
+	export https_proxy=
+	export HTTPS_PROXY=
+}
+
+trap "clean_1; exit" 0 1 2 3 15
+wget -q --no-check-certificate -O "$m1" - https://free-proxy-list.net/
+tail -n +4 "$m1" > "$m2"
+head -n -9 "$m2" > "$m3"
+clear
+for i in $(cat $m3); do
+	echo "##################"
+	echo "$i"
+	export http_proxy=http://$i
+	export HTTP_PROXY=${http_proxy}
+	export https_proxy=http://$i
+	export HTTPS_PROXY=${https_proxy}
+	curl -k -s -m 2 $url > /dev/null
+	if [[ "$?" == "0" ]]; then
+		echo -e "\e[00;1;92mGithub: OK\e[00m"
+	else
+		echo "Github: ERROR"
+	fi
+	curl -k -s -m 2 $url2 > /dev/null
+	if [[ "$?" == "0" ]]; then
+		echo -e "\e[00;1;92mGoogle: OK\e[00m"
+	else
+		echo "Google: ERROR"
+	fi
+
+done
+echo "Finalizado."
+exit 0
