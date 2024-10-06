@@ -1,0 +1,5 @@
+https://github.com/konstruktoid/hardening
+
+https://gist.github.com/ageis/f5595e59b1cddb1513d1b425a323db04
+
+https://gist.github.com/ageis/46882d96febef54854ed1baf064ed97a

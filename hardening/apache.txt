@@ -1,0 +1,80 @@
+https://httpd.apache.org/docs/2.4/misc/perf-tuning.html
+
+https://geekflare.com/apache-web-server-hardening-security/
+
+https://geekflare.com/ssl-test-certificate/
+
+https://tools.geekflare.com/tools/http-header-test
+
+.........
+
+apt-get install libapache2-mod-evasive libapache2-modsecurity
+
+.........
+
+ServerSignature Off
+ServerTokens Prod
+TraceEnable off
+SSLProtocol -ALL +TLSv1.2
+SSLCipherSuite ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM
+FileETag None
+Timeout 60
+
+<Directory />
+        AllowOverride None
+        Require all denied
+        Options -FollowSymLinks
+        Options -Includes
+        Options -ExecCGI
+        Options -Indexes
+</Directory>
+
+<Directory /usr/share>
+        AllowOverride None
+        Require all granted
+        Options -FollowSymLinks
+        Options -Includes
+        Options -ExecCGI
+        Options -Indexes
+</Directory>
+
+<Directory /var/www/>
+        AllowOverride None
+        Require all granted
+        Options -FollowSymLinks
+        Options -Includes
+        Options -ExecCGI
+        Options -Indexes
+</Directory>
+
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} !HTTP/1.1$
+RewriteRule .* - [F]
+
+---------------
+cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf.
+Open the newly created file for editing with the command sudo nano /etc/modsecurity/modsecurity.conf.
+Add the line SecRuleEngine On in the Rule engine initialization section.
+Restart Apache with the command sudo service apache2 restart.
+
+nano /etc/apache2/mods-enabled/security2.conf
+
+IncludeOptional "/usr/share/modsecurity-crs/*.conf"
+​IncludeOptional "/usr/share/modsecurity-crs/base_rules/*.conf"
+
+Save and close that file and restart Apache with the command sudo service apache2 restart.
+
+If you wind up getting errors on your site, you will need to comb through /var/log/apache2/error.log and look for errors with entries like [id "960017"] (which is a Forbidden 403 error). Once you find that, you can disable those rules (by ID) by using the SecRuleRemoveById option in your Apache directives. 
+
+----------------
+
+sudo nano /etc/php5/apache2/php.ini
+
+display_errors = Off
+log_errors = On
+allow_url_fopen = Off
+safe_mode = On
+expose_php = Off
+enable_dl = Off
+disable_functions = system, show_source, symlink, exec, dl, shell_exec, passthru, phpinfo, escapeshellarg, escapeshellcmd

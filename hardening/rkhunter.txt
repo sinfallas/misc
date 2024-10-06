@@ -1,0 +1,6 @@
+rkhunter --update
+rkhunter --propupd
+rkhunter -c --enable all --disable none
+
+
+!Can't create new socket: Permission denied

@@ -1,0 +1,8 @@
+apt-get -y install snort usbguard
+
+apt-get -y install libpam-cracklib unzip debsums auditd aide rkhunter clamav sysstat acct
+
+aideinit
+mv -fv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+aide --check
+

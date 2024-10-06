@@ -1,0 +1,34 @@
+https://linuxacademy.com/howtoguides/posts/show/topic/19746-linux-security-and-server-hardening-part2
+
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863841
+
+http://hashdump.org/wiki/linux/hardening.html
+
+https://wiki.archlinux.org/index.php/security
+
+https://wiki.archlinux.org/index.php/Chroot
+
+https://www.snort.org/
+
+https://www.tripwire.com/
+
+....................
+
+instalar nessus en una vm en mi pc
+
+
+echo "Idle users will be removed after 15 minutes"
+echo "readonly TMOUT=900" >> /etc/profile.d/os-security.sh
+echo "readonly HISTFILE" >> /etc/profile.d/os-security.sh
+chmod +x /etc/profile.d/os-security.sh
+
+
+aide
+Rather than re-invent the wheel telling you how to configure aide, please see http://www.server-world.info/en/note?os=CentOS_7&p=aide instead. However we suggest to replace the crontab entry from that site with this one.
+
+00 01 * * * /usr/sbin/aide --check | mail -s 'Daily Check by AIDE' root
+
+Even if the site mentions CentOS 7, you can use the same instructions for previous CentOS releases. 
+
+
+

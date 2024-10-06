@@ -1,0 +1,11 @@
+https://www.owasp.org/index.php/OWASP_Backend_Security_Project_PostgreSQL_Hardening
+
+https://github.com/dev-sec/chef-postgres-hardening
+
+https://github.com/dev-sec/puppet-postgres-hardening
+
+https://www.upguard.com/articles/10-ways-to-bolster-postgresql-security
+
+https://www.slideshare.net/pgdayasia/security-best-practices-for-your-postgres-deployment
+
+https://www.postgresql.org/support/security/
