@@ -1,4 +1,16 @@
-commit 979333f96ed2d07d8edac903d168c35a3176c19f (HEAD -> master, origin/master, origin/HEAD)
+commit 034a7da75cb24a42cb1746a652ccd0c602c07ae9 (HEAD -> master, origin/master, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sat Nov 16 14:40:58 2024 -0400
+
+    * comparardb
+
+commit 985deb0de3b1116e09ee1bfe4d0d623bf7e18798
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Thu Oct 10 19:27:47 2024 -0400
+
+    * changelog
+
+commit 979333f96ed2d07d8edac903d168c35a3176c19f
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Thu Oct 10 19:27:37 2024 -0400
 
