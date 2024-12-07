@@ -1,0 +1,24 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=7e393ebe-4550-412a-a156-06356b1f79d6 /               ext4    errors=remount-ro,noiversion,commit=30,noatime,async,delalloc,inode_readahead_blks=64,auto_da_alloc,barrier=0 0       1
+# /boot was on /dev/sda1 during installation
+UUID=b07146ff-fe38-45d3-a576-69b138eea6a5 /boot           ext2    defaults,noatime,async,nodev,noexec,nosuid        0       2
+# swap was on /dev/sdb6 during installation
+UUID=fb54c92d-8b2f-48ff-8ba6-d3fe1c019abf none            swap    sw              0       0
+UUID=a8148d58-003b-4134-9662-fc670ed629eb /mnt/datos	ext4	nodev,nosuid,noiversion,noatime,async,commit=30,delalloc,inode_readahead_blks=64,noauto,x-systemd.automount,auto_da_alloc	0	2
+tmpfs /tmp tmpfs rw,nodev,noatime,nosuid,noexec,mode=666 0 0
+tmpfs /var/cache/samba tmpfs rw,noatime,nodev 0 0
+tmpfs /var/cache/apt/archives tmpfs rw,noatime,nodev 0 0
+tmpfs /var/cache/apt/apt-fast tmpfs rw,noatime,nodev 0 0
+tmpfs /var/tmp tmpfs rw,noexec,nodev,noatime,nosuid,mode=666 0 0
+proc /proc proc defaults,hidepid=2 0 0
+tmpfs /run tmpfs rw,nosuid,noexec,nodev,noatime,mode=655 0 0
+tmpfs /dev/shm tmpfs defaults,nodev,nosuid,noexec 0 0
+tmpfs /run/shm tmpfs ro,noexec,nosuid,noatime,mode=666 0 0
+tmpfs /home/sinfallas/.cache tmpfs noatime,noexec,nosuid,nodev,rw,mode=700,uid=1000,gid=1000 0 0
