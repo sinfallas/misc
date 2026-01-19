@@ -1,0 +1,6 @@
+antes
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 apparmor=1 lsm=landlock,lockdown,yama,integrity,apparmor panic=10 quiet iommu=pt preempt=full rcu_nocbs=all rcutree.enable_rcu_lazy=1 nvidia-drm.modeset=1 nvidia-drm.fbdev=1 resume=UUID=d08cbec2-d9c7-4d16-9897-21a714e6871b"
+
+
+despues
+
